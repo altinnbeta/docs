@@ -9,12 +9,17 @@
     <link rel="stylesheet" href="qunit-1.12.0.css">
   </head>
   <body style="overflow: auto;">
-    <div id="qunit"></div>
-    <div id="qunit-fixture"></div>
+    <div id="qunit">
+    </div>
+
+    <div id="qunit-fixture">
+    </div>
+
     <div class="reveal" style="display: none;">
       <div class="slides">
         <!-- <section data-markdown="example.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section> -->
         <!-- Slides are separated by three lines, vertical slides by two lines, attributes are one any line starting with (spaces and) two dashes -->
+
         <section data-markdown="" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-attributes="--\s(.*?)$" data-charset="utf-8">
           <script type="text/template">
                                                 # Test attributes in Markdown
@@ -43,6 +48,7 @@
                                                 ## Slide 4
           </script>
         </section>
+
         <section data-markdown="" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-charset="utf-8">
           <script type="text/template">
                                                 # Test attributes in Markdown with default separator
@@ -71,18 +77,21 @@
                                                 ## Slide 4
           </script>
         </section>
+
         <section data-markdown="">
           <script type="text/template">
                                                 <!-- .slide: data-background="#ff0000" -->
                                                 ## Hello world
           </script>
         </section>
+
         <section data-markdown="">
           <script type="text/template">
                                                 ## Hello world
                                                 <!-- .slide: data-background="#ff0000" -->
           </script>
         </section>
+
         <section data-markdown="">
           <script type="text/template">
                                                 ## Hello world
