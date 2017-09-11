@@ -43,7 +43,7 @@
   </url>
   
   <url>
-    <loc>https://altinn.github.io/docs/guides/tjenesteeier-impl/</loc>
+    <loc>https://altinn.github.io/docs/guides/</loc>
   </url>
   
   <url>
@@ -68,6 +68,10 @@
   
   <url>
     <loc>https://altinn.github.io/docs/api/sluttbruker-api/kom-i-gang/</loc>
+  </url>
+  
+  <url>
+    <loc>https://altinn.github.io/docs/guides/samtykke/datakonsument/komme-i-gang/</loc>
   </url>
   
   <url>
@@ -103,6 +107,10 @@
   </url>
   
   <url>
+    <loc>https://altinn.github.io/docs/guides/samtykke/</loc>
+  </url>
+  
+  <url>
     <loc>https://altinn.github.io/docs/api/sluttbruker-api/meldinger/sende-inn/</loc>
   </url>
   
@@ -135,11 +143,11 @@
   </url>
   
   <url>
-    <loc>https://altinn.github.io/docs/api/sluttbruker-api/diverse/</loc>
+    <loc>https://altinn.github.io/docs/guides/samtykke/datakonsument/be-om-samtykke/</loc>
   </url>
   
   <url>
-    <loc>https://altinn.github.io/docs/guides/lenketjenester/</loc>
+    <loc>https://altinn.github.io/docs/api/sluttbruker-api/diverse/</loc>
   </url>
   
   <url>
@@ -155,7 +163,7 @@
   </url>
   
   <url>
-    <loc>https://altinn.github.io/docs/guides/</loc>
+    <loc>https://altinn.github.io/docs/guides/samtykke/datakonsument/hente-token/</loc>
   </url>
   
   <url>
@@ -180,6 +188,10 @@
   
   <url>
     <loc>https://altinn.github.io/docs/api/sluttbruker-api/diverse/betaling/</loc>
+  </url>
+  
+  <url>
+    <loc>https://altinn.github.io/docs/guides/samtykke/datakonsument/test-tjeneste/</loc>
   </url>
   
   <url>
@@ -251,10 +263,6 @@
   </url>
   
   <url>
-    <loc>https://altinn.github.io/docs/guides/samtykke/</loc>
-  </url>
-  
-  <url>
     <loc>https://altinn.github.io/docs/tjenestekatalog/dialog/samtykke/</loc>
   </url>
   
@@ -295,7 +303,7 @@
   </url>
   
   <url>
-    <loc>https://altinn.github.io/docs/guides/definisjoner/</loc>
+    <loc>https://altinn.github.io/docs/guides/samtykke/sluttbruker/</loc>
   </url>
   
   <url>
@@ -303,11 +311,87 @@
   </url>
   
   <url>
+    <loc>https://altinn.github.io/docs/guides/samtykke/sluttbruker/innlogging/</loc>
+  </url>
+  
+  <url>
+    <loc>https://altinn.github.io/docs/guides/samtykke/sluttbruker/samtykkesiden/</loc>
+  </url>
+  
+  <url>
+    <loc>https://altinn.github.io/docs/guides/samtykke/sluttbruker/oversikt-samtykker/</loc>
+  </url>
+  
+  <url>
+    <loc>https://altinn.github.io/docs/guides/samtykke/sluttbruker/trekke-samtykke/</loc>
+  </url>
+  
+  <url>
+    <loc>https://altinn.github.io/docs/guides/samtykke/sluttbruker/aktivitetslogg/</loc>
+  </url>
+  
+  <url>
     <loc>https://altinn.github.io/docs/tjenestekatalog/kanaler/apps/</loc>
   </url>
   
   <url>
-    <loc>https://altinn.github.io/docs/guides/referanser/</loc>
+    <loc>https://altinn.github.io/docs/guides/samtykke/datakilde/</loc>
+  </url>
+  
+  <url>
+    <loc>https://altinn.github.io/docs/guides/samtykke/datakilde/opprett-tjeneste/</loc>
+  </url>
+  
+  <url>
+    <loc>https://altinn.github.io/docs/guides/samtykke/datakilde/autorisere-datakonsument/</loc>
+  </url>
+  
+  <url>
+    <loc>https://altinn.github.io/docs/guides/samtykke/datakilde/bruk-av-token/</loc>
+  </url>
+  
+  <url>
+    <loc>https://altinn.github.io/docs/guides/samtykke/datakilde/test-tjeneste/</loc>
+  </url>
+  
+  <url>
+    <loc>https://altinn.github.io/docs/guides/samtykke/datakonsument/</loc>
+  </url>
+  
+  <url>
+    <loc>https://altinn.github.io/docs/guides/sluttbrukersystem/grensesnitt/</loc>
+  </url>
+  
+  <url>
+    <loc>https://altinn.github.io/docs/guides/samtykke/begrepsliste/</loc>
+  </url>
+  
+  <url>
+    <loc>https://altinn.github.io/docs/guides/sluttbrukersystem/endepunkter-oversikt/</loc>
+  </url>
+  
+  <url>
+    <loc>https://altinn.github.io/docs/guides/sluttbrukersystem/funksjonelle-scenario/</loc>
+  </url>
+  
+  <url>
+    <loc>https://altinn.github.io/docs/guides/sluttbrukersystem/</loc>
+  </url>
+  
+  <url>
+    <loc>https://altinn.github.io/docs/guides/sluttbrukersystem/hvordan-komme-i-gang/</loc>
+  </url>
+  
+  <url>
+    <loc>https://altinn.github.io/docs/guides/sluttbrukersystem/roller-og-rettigheter/</loc>
+  </url>
+  
+  <url>
+    <loc>https://altinn.github.io/docs/guides/sluttbrukersystem/skjemasett-sammenlikning/</loc>
+  </url>
+  
+  <url>
+    <loc>https://altinn.github.io/docs/guides/sluttbrukersystem/teknisk-implementasjon/</loc>
   </url>
   
   <url>
@@ -324,12 +408,32 @@
   </url>
   
   <url>
+    <loc>https://altinn.github.io/docs/guides/definisjoner/</loc>
+  </url>
+  
+  <url>
+    <loc>https://altinn.github.io/docs/guides/integrasjon/</loc>
+  </url>
+  
+  <url>
     <loc>https://altinn.github.io/docs/credits/</loc>
+  </url>
+  
+  <url>
+    <loc>https://altinn.github.io/docs/guides/lenketjenester/</loc>
+  </url>
+  
+  <url>
+    <loc>https://altinn.github.io/docs/guides/referanser/</loc>
   </url>
   
   <url>
     <loc>https://altinn.github.io/docs/tags/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://altinn.github.io/docs/guides/tjenesteeier/</loc>
   </url>
   
 </urlset>
