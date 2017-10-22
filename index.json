@@ -893,7 +893,7 @@
 	"title": "Altinn dokumentasjon",
 	"tags": [],
 	"description": "Åpen dokumentasjon av Altinn-plattformen.",
-	"content": "  Ny dokumentasjon Vi i Altinn er i gang med å forbedre dokumentasjonen og gjøre den enklere å vedlikeholde. Vi er langt fra ferdige, men ønsker å dele så tidlig som mulig.\nDokumentasjonen består av enkel markdown på GitHub, som så blir til denne løsningen.\nØnsker du å bidra? Hver side inneholder en \u0026ldquo;\rEditer\u0026rdquo;-lenke til den tilsvarende markdown-filen i GitHub.\nAlle kan med andre ord på egenhånd gjøre endringer og forbedringer.\nDu kan også foreslå forbedringer eller påpeke bugs ved å opprette en issue.\n"
+	"content": "  Ny dokumentasjon Vi i Altinn er i gang med å forbedre dokumentasjonen og gjøre den enklere å vedlikeholde. Vi er langt fra ferdige, men ønsker å dele så tidlig som mulig.\nDokumentasjonen består av enkel markdown på GitHub, som så blir til denne løsningen.\nØnsker du å bidra? Hver side inneholder en \u0026ldquo;\rEditer\u0026rdquo;-lenke til den tilsvarende markdown-filen i GitHub.\nAlle kan med andre ord gjøre endringer og forbedringer på egen hånd.\nDu kan også foreslå forbedringer eller påpeke bugs ved å opprette en issue.\n"
 },
 {
 	"uri": "https://altinn.github.io/docs/categories/",
