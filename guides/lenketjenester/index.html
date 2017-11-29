@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="generator" content="Hugo 0.29">
+    <meta name="generator" content="Hugo 0.30.2">
     <meta name="description" content="Implementasjonsguiden for lenketjenester gir en teknisk beskrivelse av hvordan lenketjenester i Altinn skal implementeres.">
     <title>
       Lenketjenester :: Altinn docs
@@ -22,6 +22,7 @@
         display:none !important;
       }
     </style>
+    <link href="/docs/css/altinn.css" rel="stylesheet">
   </head>
   <body class="" data-url="/docs/guides/lenketjenester/">
     <nav id="sidebar" class="">
@@ -46,137 +47,425 @@
         </div>
 
         <ul class="topics">
-          <li data-nav-id="/docs/api/" class="dd-item">
-            <a href="/docs/api/"><span>API</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
-            <ul>
-              <li data-nav-id="/docs/api/generelt/" class="dd-item">
-                <a href="/docs/api/generelt/"><span>Generelt</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
-                <ul>
-                  <li data-nav-id="/docs/api/generelt/feil-og-mangler/" class="dd-item">
-                    <a href="/docs/api/generelt/feil-og-mangler/"><span>Kjente feil og begrensninger</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/api/generelt/retningslinjer/" class="dd-item">
-                    <a href="/docs/api/generelt/retningslinjer/"><span>Retningslinjer</span></a>
-                  </li>
-                </ul>
-              </li>
-
-              <li data-nav-id="/docs/api/sluttbruker/" class="dd-item">
-                <a href="/docs/api/sluttbruker/"><span>Sluttbrukere</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
-                <ul>
-                  <li data-nav-id="/docs/api/sluttbruker/kom-i-gang/" class="dd-item">
-                    <a href="/docs/api/sluttbruker/kom-i-gang/"><span>Kom i gang!</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/api/sluttbruker/autentisering/" class="dd-item">
-                    <a href="/docs/api/sluttbruker/autentisering/"><span>Autentisering</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
-                    <ul>
-                      <li data-nav-id="/docs/api/sluttbruker/autentisering/brukernavn-og-passord/" class="dd-item">
-                        <a href="/docs/api/sluttbruker/autentisering/brukernavn-og-passord/"><span>Brukernavn og passord</span></a>
-                      </li>
-
-                      <li data-nav-id="/docs/api/sluttbruker/autentisering/id-porten/" class="dd-item">
-                        <a href="/docs/api/sluttbruker/autentisering/id-porten/"><span>ID-porten</span></a>
-                      </li>
-
-                      <li data-nav-id="/docs/api/sluttbruker/autentisering/virksomhetssertifikat/" class="dd-item">
-                        <a href="/docs/api/sluttbruker/autentisering/virksomhetssertifikat/"><span>Virksomhetssertifikat</span></a>
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li data-nav-id="/docs/api/sluttbruker/autorisasjon/" class="dd-item">
-                    <a href="/docs/api/sluttbruker/autorisasjon/"><span>Autorisasjon</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
-                    <ul>
-                      <li data-nav-id="/docs/api/sluttbruker/autorisasjon/rolledefinisjoner/" class="dd-item">
-                        <a href="/docs/api/sluttbruker/autorisasjon/rolledefinisjoner/"><span>Rolledefinisjoner</span></a>
-                      </li>
-
-                      <li data-nav-id="/docs/api/sluttbruker/autorisasjon/roller-og-rettigheter/" class="dd-item">
-                        <a href="/docs/api/sluttbruker/autorisasjon/roller-og-rettigheter/"><span>Roller og rettigheter</span></a>
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li data-nav-id="/docs/api/sluttbruker/innsyn/" class="dd-item">
-                    <a href="/docs/api/sluttbruker/innsyn/"><span>Innsynstjenester</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/api/sluttbruker/meldinger/" class="dd-item">
-                    <a href="/docs/api/sluttbruker/meldinger/"><span>Meldinger</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
-                    <ul>
-                      <li data-nav-id="/docs/api/sluttbruker/meldinger/hente/" class="dd-item">
-                        <a href="/docs/api/sluttbruker/meldinger/hente/"><span>Hente</span></a>
-                      </li>
-
-                      <li data-nav-id="/docs/api/sluttbruker/meldinger/sende-inn/" class="dd-item">
-                        <a href="/docs/api/sluttbruker/meldinger/sende-inn/"><span>Sende inn</span></a>
-                      </li>
-
-                      <li data-nav-id="/docs/api/sluttbruker/meldinger/signere/" class="dd-item">
-                        <a href="/docs/api/sluttbruker/meldinger/signere/"><span>Signere</span></a>
-                      </li>
-
-                      <li data-nav-id="/docs/api/sluttbruker/meldinger/slette/" class="dd-item">
-                        <a href="/docs/api/sluttbruker/meldinger/slette/"><span>Slette</span></a>
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li data-nav-id="/docs/api/sluttbruker/diverse/" class="dd-item">
-                    <a href="/docs/api/sluttbruker/diverse/"><span>Diverse</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
-                    <ul>
-                      <li data-nav-id="/docs/api/sluttbruker/diverse/profil/" class="dd-item">
-                        <a href="/docs/api/sluttbruker/diverse/profil/"><span>Profil</span></a>
-                      </li>
-
-                      <li data-nav-id="/docs/api/sluttbruker/diverse/metadata/" class="dd-item">
-                        <a href="/docs/api/sluttbruker/diverse/metadata/"><span>Metadata</span></a>
-                      </li>
-
-                      <li data-nav-id="/docs/api/sluttbruker/diverse/samtykke/" class="dd-item">
-                        <a href="/docs/api/sluttbruker/diverse/samtykke/"><span>Samtykke</span></a>
-                      </li>
-
-                      <li data-nav-id="/docs/api/sluttbruker/diverse/formidling/" class="dd-item">
-                        <a href="/docs/api/sluttbruker/diverse/formidling/"><span>Formidling</span></a>
-                      </li>
-
-                      <li data-nav-id="/docs/api/sluttbruker/diverse/betaling/" class="dd-item">
-                        <a href="/docs/api/sluttbruker/diverse/betaling/"><span>Betaling</span></a>
-                      </li>
-
-                      <li data-nav-id="/docs/api/sluttbruker/diverse/referanse-app/" class="dd-item">
-                        <a href="/docs/api/sluttbruker/diverse/referanse-app/"><span>Referanse-app</span></a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-
-              <li data-nav-id="/docs/api/tjenesteeier/" class="dd-item">
-                <a href="/docs/api/tjenesteeier/"><span>Tjenesteeiere</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
-                <ul>
-                  <li data-nav-id="/docs/api/tjenesteeier/registrering/" class="dd-item">
-                    <a href="/docs/api/tjenesteeier/registrering/"><span>Registrering</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/api/tjenesteeier/autorisasjon/" class="dd-item">
-                    <a href="/docs/api/tjenesteeier/autorisasjon/"><span>Autorisasjon</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/api/tjenesteeier/kontaktinformasjon/" class="dd-item">
-                    <a href="/docs/api/tjenesteeier/kontaktinformasjon/"><span>Kontaktinformasjon</span></a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-
           <li data-nav-id="/docs/guides/" class="dd-item parent">
             <a href="/docs/guides/"><span>Guider</span> <i class="fa fa-angle-down fa-lg category-icon"></i></a>
             <ul>
+              <li data-nav-id="/docs/guides/integrasjon/" class="dd-item">
+                <a href="/docs/guides/integrasjon/"><span>Integrasjon</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
+                <ul>
+                  <li data-nav-id="/docs/guides/integrasjon/generelt/" class="dd-item">
+                    <a href="/docs/guides/integrasjon/generelt/"><span>Generelt</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
+                    <ul>
+                      <li data-nav-id="/docs/guides/integrasjon/generelt/overordnet/" class="dd-item">
+                        <a href="/docs/guides/integrasjon/generelt/overordnet/"><span>Overordnet</span></a>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/integrasjon/generelt/om-api/" class="dd-item">
+                        <a href="/docs/guides/integrasjon/generelt/om-api/"><span>Om API</span></a>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/integrasjon/generelt/api-key/" class="dd-item">
+                        <a href="/docs/guides/integrasjon/generelt/api-key/"><span>API-key</span></a>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/integrasjon/generelt/feil-og-mangler/" class="dd-item">
+                        <a href="/docs/guides/integrasjon/generelt/feil-og-mangler/"><span>Kjente feil og mangler</span></a>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/integrasjon/generelt/retningslinjer/" class="dd-item">
+                        <a href="/docs/guides/integrasjon/generelt/retningslinjer/"><span>Retningslinjer</span></a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li data-nav-id="/docs/guides/integrasjon/tjenesteeiere/" class="dd-item">
+                    <a href="/docs/guides/integrasjon/tjenesteeiere/"><span>Tjenesteeiere</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
+                    <ul>
+                      <li data-nav-id="/docs/guides/integrasjon/tjenesteeiere/innledning/" class="dd-item">
+                        <a href="/docs/guides/integrasjon/tjenesteeiere/innledning/"><span>Innledning</span></a>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/integrasjon/tjenesteeiere/api/" class="dd-item">
+                        <a href="/docs/guides/integrasjon/tjenesteeiere/api/"><span>API</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
+                        <ul>
+                          <li data-nav-id="/docs/guides/integrasjon/tjenesteeiere/api/registrering/" class="dd-item">
+                            <a href="/docs/guides/integrasjon/tjenesteeiere/api/registrering/"><span>Registrering</span></a>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/integrasjon/tjenesteeiere/api/autorisasjon/" class="dd-item">
+                            <a href="/docs/guides/integrasjon/tjenesteeiere/api/autorisasjon/"><span>Autorisasjon</span></a>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/integrasjon/tjenesteeiere/api/kontaktinformasjon/" class="dd-item">
+                            <a href="/docs/guides/integrasjon/tjenesteeiere/api/kontaktinformasjon/"><span>Kontaktinformasjon</span></a>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/integrasjon/tjenesteeiere/webservice/" class="dd-item">
+                        <a href="/docs/guides/integrasjon/tjenesteeiere/webservice/"><span>Web Service</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
+                        <ul>
+                          <li data-nav-id="/docs/guides/integrasjon/tjenesteeiere/webservice/feilhandtering/" class="dd-item">
+                            <a href="/docs/guides/integrasjon/tjenesteeiere/webservice/feilhandtering/"><span>Feilhåndtering</span></a>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/integrasjon/tjenesteeiere/webservice/feilkoder/" class="dd-item">
+                            <a href="/docs/guides/integrasjon/tjenesteeiere/webservice/feilkoder/"><span>Feilkoder</span></a>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/integrasjon/tjenesteeiere/batch/" class="dd-item">
+                        <a href="/docs/guides/integrasjon/tjenesteeiere/batch/"><span>Batch</span></a>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/integrasjon/tjenesteeiere/funksjonelle-scenario/" class="dd-item">
+                        <a href="/docs/guides/integrasjon/tjenesteeiere/funksjonelle-scenario/"><span>Funksjonelle scenario</span></a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/" class="dd-item">
+                    <a href="/docs/guides/integrasjon/sluttbrukere/"><span>Sluttbrukere</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
+                    <ul>
+                      <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/" class="dd-item">
+                        <a href="/docs/guides/integrasjon/sluttbrukere/api/"><span>API</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
+                        <ul>
+                          <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/kom-i-gang/" class="dd-item">
+                            <a href="/docs/guides/integrasjon/sluttbrukere/api/kom-i-gang/"><span>Kom i gang!</span></a>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/autentisering/" class="dd-item">
+                            <a href="/docs/guides/integrasjon/sluttbrukere/api/autentisering/"><span>Autentisering</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
+                            <ul>
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/autentisering/brukernavn-og-passord/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/autentisering/brukernavn-og-passord/"><span>Brukernavn og passord</span></a>
+                              </li>
+
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/autentisering/id-porten/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/autentisering/id-porten/"><span>ID-porten</span></a>
+                              </li>
+
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/autentisering/virksomhetssertifikat/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/autentisering/virksomhetssertifikat/"><span>Virksomhets­sertifikat</span></a>
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/autorisasjon/" class="dd-item">
+                            <a href="/docs/guides/integrasjon/sluttbrukere/api/autorisasjon/"><span>Autorisasjon</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
+                            <ul>
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/autorisasjon/roller-og-rettigheter/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/autorisasjon/roller-og-rettigheter/"><span>Roller og rettigheter</span></a>
+                              </li>
+
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/autorisasjon/rolledefinisjoner/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/autorisasjon/rolledefinisjoner/"><span>Rolle­definisjoner</span></a>
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/innsyn/" class="dd-item">
+                            <a href="/docs/guides/integrasjon/sluttbrukere/api/innsyn/"><span>Innsyns­tjenester</span></a>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/meldinger/" class="dd-item">
+                            <a href="/docs/guides/integrasjon/sluttbrukere/api/meldinger/"><span>Meldingsboks</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
+                            <ul>
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/meldinger/hente/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/meldinger/hente/"><span>Hente</span></a>
+                              </li>
+
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/meldinger/oppdatere/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/meldinger/oppdatere/"><span>Oppdatere</span></a>
+                              </li>
+
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/meldinger/sende-inn/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/meldinger/sende-inn/"><span>Sende inn</span></a>
+                              </li>
+
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/meldinger/signere/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/meldinger/signere/"><span>Signere</span></a>
+                              </li>
+
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/meldinger/slette/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/meldinger/slette/"><span>Slette</span></a>
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/diverse/" class="dd-item">
+                            <a href="/docs/guides/integrasjon/sluttbrukere/api/diverse/"><span>Diverse</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
+                            <ul>
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/diverse/profil/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/diverse/profil/"><span>Profil</span></a>
+                              </li>
+
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/diverse/metadata/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/diverse/metadata/"><span>Metadata</span></a>
+                              </li>
+
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/diverse/samtykke/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/diverse/samtykke/"><span>Samtykke</span></a>
+                              </li>
+
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/diverse/formidling/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/diverse/formidling/"><span>Formidling</span></a>
+                              </li>
+
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/diverse/betaling/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/diverse/betaling/"><span>Betaling</span></a>
+                              </li>
+
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/diverse/referanse-app/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/diverse/referanse-app/"><span>Referanse-app</span></a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/webservice/" class="dd-item">
+                        <a href="/docs/guides/integrasjon/sluttbrukere/webservice/"><span>Web Service</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
+                        <ul>
+                          <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/webservice/grensesnitt/" class="dd-item">
+                            <a href="/docs/guides/integrasjon/sluttbrukere/webservice/grensesnitt/"><span>Grensesnitt</span></a>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/webservice/endepunkter-oversikt/" class="dd-item">
+                            <a href="/docs/guides/integrasjon/sluttbrukere/webservice/endepunkter-oversikt/"><span>Endepunkter</span></a>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/webservice/funksjonelle-scenario/" class="dd-item">
+                            <a href="/docs/guides/integrasjon/sluttbrukere/webservice/funksjonelle-scenario/"><span>Funksjonelle scenario</span></a>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/webservice/hvordan-komme-i-gang/" class="dd-item">
+                            <a href="/docs/guides/integrasjon/sluttbrukere/webservice/hvordan-komme-i-gang/"><span>Hvordan komme i gang</span></a>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/webservice/roller-og-rettigheter/" class="dd-item">
+                            <a href="/docs/guides/integrasjon/sluttbrukere/webservice/roller-og-rettigheter/"><span>Roller og rettigheter</span></a>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/webservice/skjemasett-sammenlikning/" class="dd-item">
+                            <a href="/docs/guides/integrasjon/sluttbrukere/webservice/skjemasett-sammenlikning/"><span>Skjemasett sammenligning</span></a>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/webservice/teknisk-implementasjon/" class="dd-item">
+                            <a href="/docs/guides/integrasjon/sluttbrukere/webservice/teknisk-implementasjon/"><span>Teknisk implementasjon</span></a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <li data-nav-id="/docs/guides/tul/" class="dd-item">
+                <a href="/docs/guides/tul/"><span>TUL</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
+                <ul>
+                  <li data-nav-id="/docs/guides/tul/innledning/" class="dd-item">
+                    <a href="/docs/guides/tul/innledning/"><span>Innledning</span></a>
+                  </li>
+
+                  <li data-nav-id="/docs/guides/tul/kom-i-gang/" class="dd-item">
+                    <a href="/docs/guides/tul/kom-i-gang/"><span>Kom i gang</span></a>
+                  </li>
+
+                  <li data-nav-id="/docs/guides/tul/tjenestetyper/" class="dd-item">
+                    <a href="/docs/guides/tul/tjenestetyper/"><span>Tjenestetyper</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
+                    <ul>
+                      <li data-nav-id="/docs/guides/tul/tjenestetyper/ny/" class="dd-item">
+                        <a href="/docs/guides/tul/tjenestetyper/ny/"><span>Ny tjeneste og utgave</span></a>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/tul/tjenestetyper/felles-funksjonalitet/" class="dd-item">
+                        <a href="/docs/guides/tul/tjenestetyper/felles-funksjonalitet/"><span>Felles</span></a>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/tul/tjenestetyper/formidling/" class="dd-item">
+                        <a href="/docs/guides/tul/tjenestetyper/formidling/"><span>Formidling</span></a>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/tul/tjenestetyper/innsending/" class="dd-item">
+                        <a href="/docs/guides/tul/tjenestetyper/innsending/"><span>Innsending</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
+                        <ul>
+                          <li data-nav-id="/docs/guides/tul/tjenestetyper/innsending/betaling/" class="dd-item">
+                            <a href="/docs/guides/tul/tjenestetyper/innsending/betaling/"><span>Betaling</span></a>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/tul/tjenestetyper/innsending/master/" class="dd-item">
+                            <a href="/docs/guides/tul/tjenestetyper/innsending/master/"><span>Master</span></a>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/tul/tjenestetyper/innsending/vedleggstyper/" class="dd-item">
+                            <a href="/docs/guides/tul/tjenestetyper/innsending/vedleggstyper/"><span>Vedleggstyper</span></a>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/tul/tjenestetyper/innsyn/" class="dd-item">
+                        <a href="/docs/guides/tul/tjenestetyper/innsyn/"><span>Innsyn</span></a>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/tul/tjenestetyper/lenke/" class="dd-item">
+                        <a href="/docs/guides/tul/tjenestetyper/lenke/"><span>Lenke</span></a>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/tul/tjenestetyper/melding/" class="dd-item">
+                        <a href="/docs/guides/tul/tjenestetyper/melding/"><span>Melding</span></a>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/tul/tjenestetyper/samhandling/" class="dd-item">
+                        <a href="/docs/guides/tul/tjenestetyper/samhandling/"><span>Samhandling</span></a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li data-nav-id="/docs/guides/tul/funksjonalitet/" class="dd-item">
+                    <a href="/docs/guides/tul/funksjonalitet/"><span>Funksjonalitet</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
+                    <ul>
+                      <li data-nav-id="/docs/guides/tul/funksjonalitet/kodelister/" class="dd-item">
+                        <a href="/docs/guides/tul/funksjonalitet/kodelister/"><span>Kodelister</span></a>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/tul/funksjonalitet/migrering/" class="dd-item">
+                        <a href="/docs/guides/tul/funksjonalitet/migrering/"><span>Migrering</span></a>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/tul/funksjonalitet/oversetting/" class="dd-item">
+                        <a href="/docs/guides/tul/funksjonalitet/oversetting/"><span>Oversetting</span></a>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/tul/funksjonalitet/rolleadministrasjon/" class="dd-item">
+                        <a href="/docs/guides/tul/funksjonalitet/rolleadministrasjon/"><span>Rolleadministrasjon</span></a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li data-nav-id="/docs/guides/tul/diverse/" class="dd-item">
+                    <a href="/docs/guides/tul/diverse/"><span>Diverse</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
+                    <ul>
+                      <li data-nav-id="/docs/guides/tul/diverse/administrators-oppgaver/" class="dd-item">
+                        <a href="/docs/guides/tul/diverse/administrators-oppgaver/"><span>Administrators oppgaver</span></a>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/tul/diverse/begrepsliste/" class="dd-item">
+                        <a href="/docs/guides/tul/diverse/begrepsliste/"><span>Begrepsliste</span></a>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/tul/diverse/ekstern-stil/" class="dd-item">
+                        <a href="/docs/guides/tul/diverse/ekstern-stil/"><span>Ekstern stil</span></a>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/tul/diverse/enhetstest/" class="dd-item">
+                        <a href="/docs/guides/tul/diverse/enhetstest/"><span>Enhetstest</span></a>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/tul/diverse/sletting/" class="dd-item">
+                        <a href="/docs/guides/tul/diverse/sletting/"><span>Slette tjeneste og utgave</span></a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li data-nav-id="/docs/guides/tul/vedlegg/" class="dd-item">
+                    <a href="/docs/guides/tul/vedlegg/"><span>Vedlegg</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
+                    <ul>
+                      <li data-nav-id="/docs/guides/tul/vedlegg/a/" class="dd-item">
+                        <a href="/docs/guides/tul/vedlegg/a/"><span>A: Skjemautvikling i InfoPath</span></a>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/tul/vedlegg/b/" class="dd-item">
+                        <a href="/docs/guides/tul/vedlegg/b/"><span>B: Utforming av brukergrensesnitt for skjema</span></a>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/tul/vedlegg/c/" class="dd-item">
+                        <a href="/docs/guides/tul/vedlegg/c/"><span>C: Utforming av brukervennlige tjenester</span></a>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/tul/vedlegg/d/" class="dd-item">
+                        <a href="/docs/guides/tul/vedlegg/d/"><span>D: InfoPath kodestandard</span></a>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/tul/vedlegg/e/" class="dd-item">
+                        <a href="/docs/guides/tul/vedlegg/e/"><span>E: InfoPath navnestandard</span></a>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/tul/vedlegg/f/" class="dd-item">
+                        <a href="/docs/guides/tul/vedlegg/f/"><span>F: Bruk av Visual Studio</span></a>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/tul/vedlegg/g/" class="dd-item">
+                        <a href="/docs/guides/tul/vedlegg/g/"><span>G: Web Service-oppslag fra InfoPath</span></a>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/tul/vedlegg/mappere/" class="dd-item">
+                        <a href="/docs/guides/tul/vedlegg/mappere/"><span>Mappere</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
+                        <ul>
+                          <li data-nav-id="/docs/guides/tul/vedlegg/mappere/generelt/" class="dd-item">
+                            <a href="/docs/guides/tul/vedlegg/mappere/generelt/"><span>Generelt</span></a>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/tul/vedlegg/mappere/teknologi/" class="dd-item">
+                            <a href="/docs/guides/tul/vedlegg/mappere/teknologi/"><span>Teknologi</span></a>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/tul/vedlegg/mappere/utvikling/" class="dd-item">
+                            <a href="/docs/guides/tul/vedlegg/mappere/utvikling/"><span>Utvikling</span></a>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/tul/vedlegg/mappere/testing/" class="dd-item">
+                            <a href="/docs/guides/tul/vedlegg/mappere/testing/"><span>Testing</span></a>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/tul/vedlegg/mappere/installasjon/" class="dd-item">
+                            <a href="/docs/guides/tul/vedlegg/mappere/installasjon/"><span>Installasjon</span></a>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/tul/vedlegg/mappere/diverse/" class="dd-item">
+                            <a href="/docs/guides/tul/vedlegg/mappere/diverse/"><span>Diverse</span></a>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li data-nav-id="/docs/guides/tul/vedlegg/regelmotor/" class="dd-item">
+                        <a href="/docs/guides/tul/vedlegg/regelmotor/"><span>Regelmotor</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
+                        <ul>
+                          <li data-nav-id="/docs/guides/tul/vedlegg/regelmotor/innledning/" class="dd-item">
+                            <a href="/docs/guides/tul/vedlegg/regelmotor/innledning/"><span>Innledning</span></a>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/tul/vedlegg/regelmotor/regler/" class="dd-item">
+                            <a href="/docs/guides/tul/vedlegg/regelmotor/regler/"><span>Regler</span></a>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/tul/vedlegg/regelmotor/betingelser/" class="dd-item">
+                            <a href="/docs/guides/tul/vedlegg/regelmotor/betingelser/"><span>Betingelser</span></a>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/tul/vedlegg/regelmotor/utvidede-beskrivelser/" class="dd-item">
+                            <a href="/docs/guides/tul/vedlegg/regelmotor/utvidede-beskrivelser/"><span>Utvidede beskrivelser</span></a>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/tul/vedlegg/regelmotor/eksempler/" class="dd-item">
+                            <a href="/docs/guides/tul/vedlegg/regelmotor/eksempler/"><span>Eksempler</span></a>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/tul/vedlegg/regelmotor/innf%C3%B8ring-i-xml/" class="dd-item">
+                            <a href="/docs/guides/tul/vedlegg/regelmotor/innf%C3%B8ring-i-xml/"><span>Innføring i xml</span></a>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/tul/vedlegg/regelmotor/xsd/" class="dd-item">
+                            <a href="/docs/guides/tul/vedlegg/regelmotor/xsd/"><span>Regelmotor.xsd</span></a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
               <li data-nav-id="/docs/guides/samtykke/" class="dd-item">
                 <a href="/docs/guides/samtykke/"><span>Samtykke</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
                 <ul>
@@ -253,245 +542,17 @@
                 </ul>
               </li>
 
-              <li data-nav-id="/docs/guides/tjenesteeier/" class="dd-item">
-                <a href="/docs/guides/tjenesteeier/"><span>Tjenesteeier</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
+              <li data-nav-id="/docs/guides/digital-post-til-virksomheter/" class="dd-item">
+                <a href="/docs/guides/digital-post-til-virksomheter/"><span>Digital Post til Virksomheter</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
                 <ul>
-                  <li data-nav-id="/docs/guides/tjenesteeier/innledning/" class="dd-item">
-                    <a href="/docs/guides/tjenesteeier/innledning/"><span>Innledning</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/guides/tjenesteeier/grensesnitt-web-services/" class="dd-item">
-                    <a href="/docs/guides/tjenesteeier/grensesnitt-web-services/"><span>Grensesnitt – web services</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/guides/tjenesteeier/grensesnitt-batch-til-altinn/" class="dd-item">
-                    <a href="/docs/guides/tjenesteeier/grensesnitt-batch-til-altinn/"><span>Grensesnitt – batch</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/guides/tjenesteeier/funksjonelle-scenario/" class="dd-item">
-                    <a href="/docs/guides/tjenesteeier/funksjonelle-scenario/"><span>Funksjonelle Scenario</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/guides/tjenesteeier/integrasjonspunkter/" class="dd-item">
-                    <a href="/docs/guides/tjenesteeier/integrasjonspunkter/"><span>Integrasjonspunkter</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/guides/tjenesteeier/kodeeksempler-spi/" class="dd-item">
-                    <a href="/docs/guides/tjenesteeier/kodeeksempler-spi/"><span>Kodeeksempler SPI</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/guides/tjenesteeier/feilhandtering/" class="dd-item">
-                    <a href="/docs/guides/tjenesteeier/feilhandtering/"><span>Feilhåndtering</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/guides/tjenesteeier/feilkoder/" class="dd-item">
-                    <a href="/docs/guides/tjenesteeier/feilkoder/"><span>Feilkoder</span></a>
+                  <li data-nav-id="/docs/guides/digital-post-til-virksomheter/sp%C3%B8rsm%C3%A5lsvar/" class="dd-item">
+                    <a href="/docs/guides/digital-post-til-virksomheter/sp%C3%B8rsm%C3%A5lsvar/"><span>Spørsmål og svar om DPV</span></a>
                   </li>
                 </ul>
-              </li>
-
-              <li data-nav-id="/docs/guides/mapperutvikling/" class="dd-item">
-                <a href="/docs/guides/mapperutvikling/"><span>Mapperutvikling</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
-                <ul>
-                  <li data-nav-id="/docs/guides/mapperutvikling/prosessen/" class="dd-item">
-                    <a href="/docs/guides/mapperutvikling/prosessen/"><span>Prosess for utvikling av mapper</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/guides/mapperutvikling/utviklingshandbok/" class="dd-item">
-                    <a href="/docs/guides/mapperutvikling/utviklingshandbok/"><span>Mapperutviklingshåndbok</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
-                    <ul>
-                      <li data-nav-id="/docs/guides/mapperutvikling/utviklingshandbok/bruksomrader/" class="dd-item">
-                        <a href="/docs/guides/mapperutvikling/utviklingshandbok/bruksomrader/"><span>Bruksområder</span></a>
-                      </li>
-
-                      <li data-nav-id="/docs/guides/mapperutvikling/utviklingshandbok/generelt/" class="dd-item">
-                        <a href="/docs/guides/mapperutvikling/utviklingshandbok/generelt/"><span>Generelt om mappere</span></a>
-                      </li>
-
-                      <li data-nav-id="/docs/guides/mapperutvikling/utviklingshandbok/teknologi/" class="dd-item">
-                        <a href="/docs/guides/mapperutvikling/utviklingshandbok/teknologi/"><span>Teknologi</span></a>
-                      </li>
-
-                      <li data-nav-id="/docs/guides/mapperutvikling/utviklingshandbok/utvikling/" class="dd-item">
-                        <a href="/docs/guides/mapperutvikling/utviklingshandbok/utvikling/"><span>Mapper-utvikling</span></a>
-                      </li>
-
-                      <li data-nav-id="/docs/guides/mapperutvikling/utviklingshandbok/testing/" class="dd-item">
-                        <a href="/docs/guides/mapperutvikling/utviklingshandbok/testing/"><span>Testing av mappere</span></a>
-                      </li>
-
-                      <li data-nav-id="/docs/guides/mapperutvikling/utviklingshandbok/installasjon/" class="dd-item">
-                        <a href="/docs/guides/mapperutvikling/utviklingshandbok/installasjon/"><span>Installasjon</span></a>
-                      </li>
-
-                      <li data-nav-id="/docs/guides/mapperutvikling/utviklingshandbok/diverse/" class="dd-item">
-                        <a href="/docs/guides/mapperutvikling/utviklingshandbok/diverse/"><span>Diverse</span></a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-
-              <li data-nav-id="/docs/guides/sluttbrukersystem/" class="dd-item">
-                <a href="/docs/guides/sluttbrukersystem/"><span>Sluttbrukersystemer</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
-                <ul>
-                  <li data-nav-id="/docs/guides/sluttbrukersystem/grensesnitt/" class="dd-item">
-                    <a href="/docs/guides/sluttbrukersystem/grensesnitt/"><span>Grensesnitt</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/guides/sluttbrukersystem/endepunkter-oversikt/" class="dd-item">
-                    <a href="/docs/guides/sluttbrukersystem/endepunkter-oversikt/"><span>Endepunkter</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/guides/sluttbrukersystem/funksjonelle-scenario/" class="dd-item">
-                    <a href="/docs/guides/sluttbrukersystem/funksjonelle-scenario/"><span>Funksjonelle scenario</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/guides/sluttbrukersystem/hvordan-komme-i-gang/" class="dd-item">
-                    <a href="/docs/guides/sluttbrukersystem/hvordan-komme-i-gang/"><span>Hvordan komme i gang</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/guides/sluttbrukersystem/roller-og-rettigheter/" class="dd-item">
-                    <a href="/docs/guides/sluttbrukersystem/roller-og-rettigheter/"><span>Roller og rettigheter</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/guides/sluttbrukersystem/skjemasett-sammenlikning/" class="dd-item">
-                    <a href="/docs/guides/sluttbrukersystem/skjemasett-sammenlikning/"><span>Skjemasett sammenligning</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/guides/sluttbrukersystem/teknisk-implementasjon/" class="dd-item">
-                    <a href="/docs/guides/sluttbrukersystem/teknisk-implementasjon/"><span>Teknisk implementasjon</span></a>
-                  </li>
-                </ul>
-              </li>
-
-              <li data-nav-id="/docs/guides/integrasjon/" class="dd-item">
-                <a href="/docs/guides/integrasjon/"><span>Integrasjon</span></a>
               </li>
 
               <li data-nav-id="/docs/guides/lenketjenester/" class="dd-item parent active">
                 <a href="/docs/guides/lenketjenester/"><span>Lenketjenester</span></a>
-              </li>
-            </ul>
-          </li>
-
-          <li data-nav-id="/docs/tjenestekatalog/" class="dd-item">
-            <a href="/docs/tjenestekatalog/"><span>Tjenestekatalog</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
-            <ul>
-              <li data-nav-id="/docs/tjenestekatalog/dialog/" class="dd-item">
-                <a href="/docs/tjenestekatalog/dialog/"><span>Digital dialog</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
-                <ul>
-                  <li data-nav-id="/docs/tjenestekatalog/dialog/betaling/" class="dd-item">
-                    <a href="/docs/tjenestekatalog/dialog/betaling/"><span>Betaling</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/tjenestekatalog/dialog/formidling/" class="dd-item">
-                    <a href="/docs/tjenestekatalog/dialog/formidling/"><span>Formidling av data</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/tjenestekatalog/dialog/innsending/" class="dd-item">
-                    <a href="/docs/tjenestekatalog/dialog/innsending/"><span>Innsending</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/tjenestekatalog/dialog/innsyn/" class="dd-item">
-                    <a href="/docs/tjenestekatalog/dialog/innsyn/"><span>Innsyn</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/tjenestekatalog/dialog/lenketjeneste/" class="dd-item">
-                    <a href="/docs/tjenestekatalog/dialog/lenketjeneste/"><span>Lenketjeneste</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/tjenestekatalog/dialog/melding/" class="dd-item">
-                    <a href="/docs/tjenestekatalog/dialog/melding/"><span>Melding</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/tjenestekatalog/dialog/samhandling/" class="dd-item">
-                    <a href="/docs/tjenestekatalog/dialog/samhandling/"><span>Samhandling</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/tjenestekatalog/dialog/samtykke/" class="dd-item">
-                    <a href="/docs/tjenestekatalog/dialog/samtykke/"><span>Samtykke</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/tjenestekatalog/dialog/varsling/" class="dd-item">
-                    <a href="/docs/tjenestekatalog/dialog/varsling/"><span>Varsling</span></a>
-                  </li>
-                </ul>
-              </li>
-
-              <li data-nav-id="/docs/tjenestekatalog/kanaler/" class="dd-item">
-                <a href="/docs/tjenestekatalog/kanaler/"><span>Kanaler</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
-                <ul>
-                  <li data-nav-id="/docs/tjenestekatalog/kanaler/altinn-api/" class="dd-item">
-                    <a href="/docs/tjenestekatalog/kanaler/altinn-api/"><span>REST-API</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/tjenestekatalog/kanaler/grensesnitt-sluttbrukersystem/" class="dd-item">
-                    <a href="/docs/tjenestekatalog/kanaler/grensesnitt-sluttbrukersystem/"><span>Web services</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/tjenestekatalog/kanaler/grensesnitt-tjenesteeier/" class="dd-item">
-                    <a href="/docs/tjenestekatalog/kanaler/grensesnitt-tjenesteeier/"><span>Tjenesteeier</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/tjenestekatalog/kanaler/portal/" class="dd-item">
-                    <a href="/docs/tjenestekatalog/kanaler/portal/"><span>Portal</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/tjenestekatalog/kanaler/apps/" class="dd-item">
-                    <a href="/docs/tjenestekatalog/kanaler/apps/"><span>Apps</span></a>
-                  </li>
-                </ul>
-              </li>
-
-              <li data-nav-id="/docs/tjenestekatalog/support/" class="dd-item">
-                <a href="/docs/tjenestekatalog/support/"><span>Support</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
-                <ul>
-                  <li data-nav-id="/docs/tjenestekatalog/support/brukersupport/" class="dd-item">
-                    <a href="/docs/tjenestekatalog/support/brukersupport/"><span>Brukersupport</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/tjenestekatalog/support/kurs-og-seminar/" class="dd-item">
-                    <a href="/docs/tjenestekatalog/support/kurs-og-seminar/"><span>Kurs og seminar</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/tjenestekatalog/support/operativ-veiledning/" class="dd-item">
-                    <a href="/docs/tjenestekatalog/support/operativ-veiledning/"><span>Operativ veiledning</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/tjenestekatalog/support/rammeavtale-konsulentbistand/" class="dd-item">
-                    <a href="/docs/tjenestekatalog/support/rammeavtale-konsulentbistand/"><span>Rammeavtale konsulentbistand</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/tjenestekatalog/support/sluttbrukersystem/" class="dd-item">
-                    <a href="/docs/tjenestekatalog/support/sluttbrukersystem/"><span>Sluttbrukersystem</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/tjenestekatalog/support/statistikk/" class="dd-item">
-                    <a href="/docs/tjenestekatalog/support/statistikk/"><span>Statistikk og rapporter</span></a>
-                  </li>
-                </ul>
-              </li>
-
-              <li data-nav-id="/docs/tjenestekatalog/sikkerhet/" class="dd-item">
-                <a href="/docs/tjenestekatalog/sikkerhet/"><span>Sikkerhet</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
-                <ul>
-                  <li data-nav-id="/docs/tjenestekatalog/sikkerhet/autentisering/" class="dd-item">
-                    <a href="/docs/tjenestekatalog/sikkerhet/autentisering/"><span>Autentisering</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/tjenestekatalog/sikkerhet/autorisasjon/" class="dd-item">
-                    <a href="/docs/tjenestekatalog/sikkerhet/autorisasjon/"><span>Autorisasjon</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/tjenestekatalog/sikkerhet/logging/" class="dd-item">
-                    <a href="/docs/tjenestekatalog/sikkerhet/logging/"><span>Logging</span></a>
-                  </li>
-
-                  <li data-nav-id="/docs/tjenestekatalog/sikkerhet/signering/" class="dd-item">
-                    <a href="/docs/tjenestekatalog/sikkerhet/signering/"><span>Signering</span></a>
-                  </li>
-                </ul>
               </li>
             </ul>
           </li>
@@ -532,7 +593,7 @@
                 <a href="/docs/releases/2017/"><span>2017</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
                 <ul>
                   <li data-nav-id="/docs/releases/2017/17-2/" class="dd-item">
-                    <a href="/docs/releases/2017/17-2/"><span>17.2 (under utvikling)</span></a>
+                    <a href="/docs/releases/2017/17-2/"><span>17.2</span></a>
                   </li>
 
                   <li data-nav-id="/docs/releases/2017/17-1-1/" class="dd-item">
@@ -593,7 +654,7 @@
           </li>
 
           <li class="" role="">
-            <a href="https://github.com/altinn/docs"><i class='fa fa-fw fa-github'></i> GitHub repo</a>
+            <a href="https://github.com/altinn/docs"><i class='fa fa-fw fa-github'></i> GitHub</a>
           </li>
         </ul>
 
@@ -609,11 +670,11 @@
       <div class="padding highlightable">
         <div id="top-bar">
           <div id="top-github-link">
-            <a class="github-link" href="https://github.com/altinn/docs/blob/master/content/guides/lenketjenester/_index.md" target="blank"><i class="fa fa-code-fork"></i> Editer</a>
+            <a class="github-link" href="https://github.com/altinn/docs/blob/master/content/guides/lenketjenester/_index.md" target="blank"><i class="fa fa-code-fork"></i> Endre</a>
           </div>
 
           <div id="breadcrumbs" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-            <span id="sidebar-toggle-span"><a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i></a></span> <span id="toc-menu"><i class="fa fa-list-alt"></i></span> <span class="links"><a href='/docs/'>Altinn dokumentasjon</a> &gt; <a href='/docs/guides/'>Guider</a> &gt; Lenketjenester</span>
+            <span id="sidebar-toggle-span"><a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i></a></span> <span id="toc-menu"><i class="fa fa-list-alt"></i></span> <span class="links"><a href='/docs/'>Altinn docs</a> / <a href='/docs/guides/'>Guider</a> / Lenketjenester</span>
           </div>
 
           <div class="progress">
@@ -623,52 +684,58 @@
                   <li>
                     <ul>
                       <li>
+                        <a href="#1-innledning">1&nbsp;Innledning</a>
+                      </li>
+
+                      <li>
+                        <a href="#2-definisjoner-definisjoner"></a><a href="../../definisjoner"><strong>2 Definisjoner</strong></a>
+                      </li>
+
+                      <li>
+                        <a href="#3-refererte-dokumenter-og-linker">3 Refererte dokumenter og linker</a>
+                      </li>
+
+                      <li>
+                        <a href="#4-overordnet-flyt-for-lenketjenesten">4 Overordnet flyt for lenketjenesten</a>
+                      </li>
+
+                      <li>
+                        <a href="#5-implementasjon-av-lenketjenesten">5 Implementasjon av lenketjenesten.</a>
+                      </li>
+
+                      <li>
+                        <a href="#5-1-utvikling-av-tjenesteiers-eksterne-tjeneste">5.1 Utvikling av tjenesteiers eksterne tjeneste</a>
                         <ul>
                           <li>
-                            <a href="#1-innledning">1&nbsp;Innledning</a>
+                            <a href="#f%C3%B8derering-av-identitet-fra-idporten">Føderering av identitet fra IDPorten</a>
                           </li>
 
                           <li>
-                            <a href="#3-refererte-dokumenter-og-linker">3 Refererte dokumenter og linker</a>
+                            <a href="#hente-avgiver-med-tempkey-fra-altinn">Hente avgiver med tempkey fra Altinn.</a>
                           </li>
 
                           <li>
-                            <a href="#4-overordnet-flyt-for-lenketjenesten">4 Overordnet flyt for lenketjenesten</a>
+                            <a href="#sjekke-sluttbrukers-autorisasjon-ved-bruk-av-webservice">Sjekke sluttbrukers autorisasjon ved bruk av webservice</a>
                           </li>
+                        </ul>
+                      </li>
 
+                      <li>
+                        <a href="#5-2-integrasjon-mot-idporten">5.2 Integrasjon mot IDPorten</a>
+                      </li>
+
+                      <li>
+                        <a href="#5-3-utvikle-lenketjenesten-i-tul">5.3 Utvikle Lenketjenesten i TUL</a>
+                        <ul>
                           <li>
-                            <a href="#5-implementasjon-av-lenketjenesten">5 Implementasjon av lenketjenesten.</a>
+                            <a href="#altinn-rolle">Altinn rolle</a>
                           </li>
+                        </ul>
+                      </li>
 
-                          <li>
-                            <a href="#5-1-utvikling-av-tjenesteiers-eksterne-tjeneste">5.1 Utvikling av tjenesteiers eksterne tjeneste</a>
-                            <ul>
-                              <li>
-                                <a href="#1-f%C3%B8derering-av-identitet-fra-idporten">1. Føderering av identitet fra IDPorten</a>
-                              </li>
-
-                              <li>
-                                <a href="#2-hente-avgiver-med-tempkey-fra-altinn">2. Hente avgiver med tempkey fra Altinn.</a>
-                              </li>
-
-                              <li>
-                                <a href="#3-sjekke-sluttbrukers-autorisasjon-ved-bruk-av-webservice">3. Sjekke sluttbrukers autorisasjon ved bruk av webservice</a>
-                              </li>
-                            </ul>
-                          </li>
-
-                          <li>
-                            <a href="#5-2-integrasjon-mot-idporten">5.2 Integrasjon mot IDPorten</a>
-                          </li>
-
-                          <li>
-                            <a href="#5-3-utvikle-lenketjenesten-i-tul">5.3 Utvikle Lenketjenesten i TUL</a>
-                          </li>
-
-                          <li>
-                            <a href="#5-4-bruk-av-altinns-autorisasjonswebservice">5.4 Bruk av Altinns autorisasjonswebservice</a>
-                          </li>
-
+                      <li>
+                        <a href="#5-4-bruk-av-altinns-autorisasjonswebservice">5.4 Bruk av Altinns autorisasjonswebservice</a>
+                        <ul>
                           <li>
                             <a href="#eksempel-request">Eksempel Request</a>
                           </li>
@@ -677,11 +744,7 @@
                             <a href="#eksempel-response">Eksempel Response</a>
                             <ul>
                               <li>
-                                <ul>
-                                  <li>
-                                    <a href="#feilsituasjoner">Feilsituasjoner</a>
-                                  </li>
-                                </ul>
+                                <a href="#feilsituasjoner">Feilsituasjoner</a>
                               </li>
                             </ul>
                           </li>
@@ -690,25 +753,21 @@
                             <a href="#5-4-2-authorizationdecisionpointexternal-authorizeaccessexternal">5.4.2 AuthorizationDecisionPointExternal.AuthorizeAccessExternal</a>
                             <ul>
                               <li>
-                                <ul>
-                                  <li>
-                                    <a href="#authorizationrequest">AuthorizationRequest:</a>
-                                  </li>
-
-                                  <li>
-                                    <a href="#authorizationresponse">AuthorizationResponse:</a>
-                                  </li>
-
-                                  <li>
-                                    <a href="#5-4-3-authorizationadministrationexternal-getreportees">5.4.3 AuthorizationAdministrationExternal.GetReportees</a>
-                                  </li>
-                                </ul>
+                                <a href="#authorizationrequest">AuthorizationRequest:</a>
                               </li>
 
                               <li>
-                                <a href="#6-feilsituasjoner-i-produksjon">6 Feilsituasjoner i produksjon</a>
+                                <a href="#authorizationresponse">AuthorizationResponse:</a>
+                              </li>
+
+                              <li>
+                                <a href="#5-4-3-authorizationadministrationexternal-getreportees">5.4.3 AuthorizationAdministrationExternal.GetReportees</a>
                               </li>
                             </ul>
+                          </li>
+
+                          <li>
+                            <a href="#6-feilsituasjoner-i-produksjon">6 Feilsituasjoner i produksjon</a>
                           </li>
                         </ul>
                       </li>
@@ -725,21 +784,21 @@
             Lenketjenester
           </h1>
 
-          <h3 id="1-innledning">
+          <h2 id="1-innledning">
             1&nbsp;Innledning
-          </h3>
+          </h2>
 
           <p>
             Implementasjonsguiden for lenketjenester gir en teknisk beskrivelse av hvordan lenketjenester i Altinn skal implementeres.&nbsp;Dokumentet er ment for utviklingsressurser hos tjenesteeiere som skal utvikle lenketjenester. Implementasjon av lenketjenesten i Altinn krever at tjenesteeiere også oppretter føderering av brukere fra IDPorten mot sin tjeneste. Dette dokumentet inneholder ikke detaljert informasjon om oppsett av føderering mot IDPorten, men beskriver hvordan løsningen for lenketjenester forholder seg til IDPorten, og hva dette innebærer for tjenesteeieren.
           </p>
 
-          <p>
+          <h2 id="2-definisjoner-definisjoner">
             <a href="../../definisjoner"><strong>2 Definisjoner</strong></a>
-          </p>
+          </h2>
 
-          <h3 id="3-refererte-dokumenter-og-linker">
+          <h2 id="3-refererte-dokumenter-og-linker">
             3 Refererte dokumenter og linker
-          </h3>
+          </h2>
 
           <table>
             <thead>
@@ -774,9 +833,9 @@
             </tbody>
           </table>
 
-          <h3 id="4-overordnet-flyt-for-lenketjenesten">
+          <h2 id="4-overordnet-flyt-for-lenketjenesten">
             4 Overordnet flyt for lenketjenesten
-          </h3>
+          </h2>
 
           <p>
             Lenketjenester i Altinn kan benyttes av tjenesteeiere som ønsker å tilgjengeliggjøre sine tjenester via Altinn, og ta i bruk Altinns autorisasjonsmodell, men ønsker å beholde egen tjenestemotor. Lenketjenester defineres i TUL og migreres til SBL på linje med andre tjeneste¬typer, slik at avgiver- og rettighetskrav kan konfigureres i TUL og lenketjenester kan knyttes inn i samhandlingstjenester.
@@ -818,7 +877,7 @@
             Figur 1 viser IDPorten, Altinn, tjenesten og tjenesteeier i et standard «SAML-univers». Altinn er ikke Identity Provider og IDPorten utfører dermed all autentisering av sluttbrukere som deretter fødereres mot Altinn som er Service Provider. Altinn deltar i IDPortens Circle of trust sammen med tjenesteeiere for lenketjenester som også er Service Provider.
           </p>
 
-          <ol>
+          <ul>
             <li>
               <strong>Punkt 1a og 1b</strong>. Sluttbruker når lenketjenesten på to måter; via tjenestekatalogen i Altinn eller via dyplenke hos tjenenesteeier.
             </li>
@@ -826,7 +885,7 @@
             <li>
               <strong>Punkt 2</strong>. Når sluttbruker prøver å nå lenketjenesten i Altinn blir det sjekket om sluttbruker er pålogget Altinn. Dersom sluttbruker ikke er pålogget Altinn, blir brukeren ført til IDPorten for autentisering. Sluttbruker blir autentisert i IDPorten og IDPorten fødererer sluttbrukerens identitet til Altinn.
             </li>
-          </ol>
+          </ul>
 
           <figure>
             <img src="/docs/images/guides/lenketjenester/Lenketjeneste2.jpg">
@@ -841,7 +900,7 @@
             Altinn har verifisert sluttbrukerens identitet og sluttbrukeren er innenfor Circle of Trust med IDPorten og Altinn. Circle of Trust er et begrept innenfor SAML som beskriver systemer med gjensidig tillitt.
           </p>
 
-          <ol>
+          <ul>
             <li>
               <strong>Punkt 3. og Punkt 4</strong>. Sluttbrukeren blir ført til valg av avgiver siden i Altinn. Avgiverkontroll og eventuelle tjenestekontroller som er satt på lenketjenesten i TUL blir utført.<br>
             </li>
@@ -849,7 +908,7 @@
             <li>
               <strong>Punkt 5</strong>. Dersom sluttbruker og valgt avgiver tilfredstiller kontrollene satt på tjenesten, blir brukeren videreført til den eksterne tjenesten med en temporær nøkkel lagt til URL.
             </li>
-          </ol>
+          </ul>
 
           <figure>
             <img src="/docs/images/guides/lenketjenester/Lenketjeneste3.jpg">
@@ -864,7 +923,7 @@
             Tjenesteeier har verifisert at sluttbrukeren er autentisert og sluttbruker er innenfor Circle of Trust med IDPorten, Altinn og Tjenesteeier.
           </p>
 
-          <ol>
+          <ul>
             <li>
               <strong>Punkt 6</strong>. Når sluttbruker kommer til den beskyttede tjenesten hos tjenesteeier, må tjenesteeier sjekke om sluttbrukeren er pålogget i tjenesteeiers løsning. Dersom sluttbrukeren ikke er pålogget i tjenesteeiers løsning, verifiseres det at brukeren er pålogget i IDPorten og IDPorten fødererer sluttbrukerens identitet til tjenesteeier.
             </li>
@@ -880,59 +939,59 @@
             <li>
               <strong>Punkt 9</strong>. Brukeren kan nå lenketjenesten.
             </li>
-          </ol>
+          </ul>
 
-          <h3 id="5-implementasjon-av-lenketjenesten">
+          <h2 id="5-implementasjon-av-lenketjenesten">
             5 Implementasjon av lenketjenesten.
-          </h3>
+          </h2>
 
           <p>
             De påfølgende kapitlene vil gi en teknisk detaljert beskriveles av hvordan tjenesteiere bør implementere lenketjenesten i tjenesteeieres applikasjon.
           </p>
 
-          <h3 id="5-1-utvikling-av-tjenesteiers-eksterne-tjeneste">
+          <h2 id="5-1-utvikling-av-tjenesteiers-eksterne-tjeneste">
             5.1 Utvikling av tjenesteiers eksterne tjeneste
-          </h3>
+          </h2>
 
           <p>
             Hvordan tjenesten skal fungere i ekstern portal har Altinn ikke et forhold til, og tjenesteier har selv ansvaret for utviklingen av applikasjonen som driver den eksterne tjenesten. Men, i forhold til lenketjenesten i Altinn er det tre hovedfunksjoner tjenesteier må implementere i sin løsning.
           </p>
 
-          <h4 id="1-føderering-av-identitet-fra-idporten">
-            1. Føderering av identitet fra IDPorten
-          </h4>
+          <h3 id="føderering-av-identitet-fra-idporten">
+            Føderering av identitet fra IDPorten
+          </h3>
 
           <p>
             Ressursene som inngår i tjenesten, og dermed er tilgjengelige for sluttbrukere, må beskyttes ved bruk av SAML for føderering av brukerindentiet fra IDPorten. Hvordan dette løses kan tjenesteier selv avgjøre innen for de kravene som stilles av IDPorten. Det som er viktig for lenketjenesten er at sluttbrukers identitet blir verifisert og mottatt i applikasjonen.
           </p>
 
-          <h4 id="2-hente-avgiver-med-tempkey-fra-altinn">
-            2. Hente avgiver med tempkey fra Altinn.
-          </h4>
+          <h3 id="hente-avgiver-med-tempkey-fra-altinn">
+            Hente avgiver med tempkey fra Altinn.
+          </h3>
 
           <p>
             Når sluttbrukeren overføres fra Altinn til den eksterne tjenesten i en http GET request blir en temporær nøkkel (tempkey) lagt til URL. Denne temporære nøkkelen skal benyttes i webservicekall til Altinn for å hente avgiveren brukeren har valgt i portalen. Det er altså viktig at den temporære nøkkelen kan videreføres igjennom fødereringen mot IDPorten, og dermed kan det være hensiktsmessig at applikasjonen mellomlagrer den temporære nøkkelen før sluttbrukeren blir «redirected» til IDPorten i forbindelse med føderering.
           </p>
 
-          <h4 id="3-sjekke-sluttbrukers-autorisasjon-ved-bruk-av-webservice">
-            3. Sjekke sluttbrukers autorisasjon ved bruk av webservice
-          </h4>
+          <h3 id="sjekke-sluttbrukers-autorisasjon-ved-bruk-av-webservice">
+            Sjekke sluttbrukers autorisasjon ved bruk av webservice
+          </h3>
 
           <p>
             Når identiteten til sluttbrukeren er fastslått etter fødereringen fra IDporten, og avgiver er mottatt i responsen fra Altinns webservice, må applikasjonen benytte Altinns autorisasjonswebservice for å få bekreftet at sluttbruker har rettigheter til å utføre spesifisert operasjon på lenketjenesten til tjenesteeieren for valgt avgiver.
           </p>
 
-          <h3 id="5-2-integrasjon-mot-idporten">
+          <h2 id="5-2-integrasjon-mot-idporten">
             5.2 Integrasjon mot IDPorten
-          </h3>
+          </h2>
 
           <p>
             ID-Porten er Identity Provider for lenketjenester, og tjenesteeiere i Altinn som har lenketjenester må etablere en egen, standard, samarbeidsavtale med ID-porten. Dette fordi en slik tjenesteeier vil måtte ha en direkte integrasjon mot ID-porten. DIFI har utarbeidet en tilslutningsguide som beskriver den jobben som må gjøres for å sette opp SAML-integrasjon mot IDPorten. Tilslutningsguiden finnes under ID-Porten &gt; Dokumentasjon i <a href="http://samarbeid.difi.no">Samarbeidsportalen</a> til Difi.
           </p>
 
-          <h3 id="5-3-utvikle-lenketjenesten-i-tul">
+          <h2 id="5-3-utvikle-lenketjenesten-i-tul">
             5.3 Utvikle Lenketjenesten i TUL
-          </h3>
+          </h2>
 
           <p>
             Lenketjenestene utvikles i TUL på samme måte som andre tjenestetyper, ved at man først oppretter en tjeneste med tjenestetype Lenketjeneste, og deretter har utgaver av tjenesten på nivået under. Det er utgavene som migreres til SBL og er tilgjengelig for sluttbruker. Når tjenesten opprettes blir det generert en ekstern tjenestekode, som er unik for hver enkelt tjeneste. Sammen med ekstern utgavekode, som man setter på Utgaveparametre, danner ekstern tjenestekode en unik identifikator til hver utgave. Ekstern tjenestekode og ekstern utgavekode brukes både i direktelenke til tjenesten i Altinn, samt i autorisasjonsforespørselen mot Altinn.
@@ -943,21 +1002,102 @@
           </p>
 
           <p>
-            På utgaveparametre definerer man lenken som skal peke mot skjema: - Utgavenavn – dette er navnet som sluttbruker ser i SBL - Kortnavn – vises bare i TUL - Ekstern utgavekode – numerisk kode som må være unik innen hver tjeneste. Sammen med tjenestekoden utgjør tjenesteutgavekoden en unik identifikator av tjenesesteutgaven, og dyplenken til skjema vil bestå av disse to verdiene - Hovedspråk – angi hvilket hovedspråk tjenesten skal finnes på - Gyldighetsdatoer – angi gyldig fra-dato og gyldig til-dato - Instansierings-/serivcekontroller - Altinn verifiserer at valgt avgiver er over 18 år før brukeren gis tilgang til lenketjenesten. Er kun gyldig dersom avgiver er person. - Altinn verifiserer at innlogget bruker har registerert personlig epostadresse i profilen før brukeren gis tilgang til lenketjenesten. - Lenketjeneste detaljer – her legges url til tjenesten på tjenesteeiers skjemamotor inn - Logging og sporing – angi om loggings og sporingsinfo skal lagres i tredjeparts arkiv, og evt hvor lenge. Minimum 10 år hvis logging/sporing skal benyttes. - Avgiverkrav – angi hvike aktører/avgivere som skal kunne bruke tjenesten. Tilgjengelige valg er; - Privatperson - Juridisk enhet - Bedrift - Konkursbo - Bedrift eller juridisk enhet - Person eller juridisk enhet - Bedrift, juridisk enhet eller konkursbo - Alle aktører - Sikkerhetsnivå – lenketjenester i Altinn 2 må settes opp med sikkerhetsnivå 3 eller 4, fordi IDPorten benyttes til autentisering og de tilbyr nivå 3 og 4. - Virksomhetsbrukere – angi om sluttbrukere skal kunne bruke virksomhetssertifikat til å logge inn. Med virksomhetssertifikat er det ingen knytning til fødselsnummeret til vedkommende som bruker tjenesten. - Samhandlingstjeneste – lenketjenester kan defineres til å kunne inngå i en samhandlingstjeneste. Da settes det et kryss på utgaven her, og utgaven vil være valgbar som tilgjengelig tjeneste for samhandlingstjenester.
-          </p>
-
-          <p>
-            Altinn rolle På samme måte som andre tjenestetyper, må lenketjenestene knyttes til en eller flere Altinn-roller slik at tjenestene blir tilgjengelig for sluttbrukerne. Altinn-rollene er knyttet til et sett med eksterne roller fra Enhetsregisteret (ER), og når tjenesteeier skal velge hvilke(n) Altinn-rolle® som skal gi tilgang til tjenesten, er det viktig å tenke over en del ting; - Hvem skal bruke tjenesten – det må velges en eller flere roller som sikrer at alle aktuelle avgivere har tilgang til tjenesten. Ulike organisasjonstyper registrerer ulike typer eksterne roller i ER, og tjenesteeier må velge en Altinn-rolle som dekker ulike organisasjonstyper. F.eks vil et enkeltpersonsforetak kanskje bare ha innehaver registrert, mens et AS har både daglig leder, styreleder og revisor. Hvis både ENK’et og AS’et skal kunne benytte tjenesten, må Altinn-rollen som knyttes til tjenesten være knyttet til både Innehaver og Daglig leder, Styreleder eller Revisor. Tilgjengelige roller finnes på “rolleadministrasjonssiden” i TUL og i <a href="https://www.altinn.no/no/Portalhjelp/Administrere-rettigheter-og-prosessteg/Rolleoversikt">portalhjelpen</a> i SBL.
+            På utgaveparametre definerer man lenken som skal peke mot skjema:
           </p>
 
           <ul>
+            <li>Utgavenavn – dette er navnet som sluttbruker ser i SBL
+            </li>
+
+            <li>Kortnavn – vises bare i TUL
+            </li>
+
+            <li>Ekstern utgavekode – numerisk kode som må være unik innen hver tjeneste. Sammen med tjenestekoden utgjør tjenesteutgavekoden en unik identifikator av tjenesesteutgaven, og dyplenken til skjema vil bestå av disse to verdiene
+            </li>
+
+            <li>Hovedspråk – angi hvilket hovedspråk tjenesten skal finnes på
+            </li>
+
+            <li>Gyldighetsdatoer – angi gyldig fra-dato og gyldig til-dato
+            </li>
+
+            <li>Instansierings-/serivcekontroller
+            </li>
+
+            <li>Altinn verifiserer at valgt avgiver er over 18 år før brukeren gis tilgang til lenketjenesten. Er kun gyldig dersom avgiver er person.
+            </li>
+
+            <li>Altinn verifiserer at innlogget bruker har registerert personlig epostadresse i profilen før brukeren gis tilgang til lenketjenesten.
+            </li>
+
+            <li>Lenketjeneste detaljer – her legges url til tjenesten på tjenesteeiers skjemamotor inn
+            </li>
+
+            <li>Logging og sporing – angi om loggings og sporingsinfo skal lagres i tredjeparts arkiv, og evt hvor lenge. Minimum 10 år hvis logging/sporing skal benyttes.
+            </li>
+
+            <li>Avgiverkrav – angi hvike aktører/avgivere som skal kunne bruke tjenesten.
+            </li>
+          </ul>
+
+          <p>
+            Tilgjengelige valg er:
+          </p>
+
+          <ul>
+            <li>Privatperson
+            </li>
+
+            <li>Juridisk enhet
+            </li>
+
+            <li>Bedrift
+            </li>
+
+            <li>Konkursbo
+            </li>
+
+            <li>Bedrift eller juridisk enhet
+            </li>
+
+            <li>Person eller juridisk enhet
+            </li>
+
+            <li>Bedrift, juridisk enhet eller konkursbo
+            </li>
+
+            <li>Alle aktører
+            </li>
+
+            <li>Sikkerhetsnivå – lenketjenester i Altinn 2 må settes opp med sikkerhetsnivå 3 eller 4, fordi IDPorten benyttes til autentisering og de tilbyr nivå 3 og 4.
+            </li>
+
+            <li>Virksomhetsbrukere – angi om sluttbrukere skal kunne bruke virksomhetssertifikat til å logge inn. Med virksomhetssertifikat er det ingen knytning til fødselsnummeret til vedkommende som bruker tjenesten.
+            </li>
+
+            <li>Samhandlingstjeneste – lenketjenester kan defineres til å kunne inngå i en samhandlingstjeneste. Da settes det et kryss på utgaven her, og utgaven vil være valgbar som tilgjengelig tjeneste for samhandlingstjenester.
+            </li>
+          </ul>
+
+          <h3 id="altinn-rolle">
+            Altinn rolle
+          </h3>
+
+          <p>
+            På samme måte som andre tjenestetyper, må lenketjenestene knyttes til en eller flere Altinn-roller slik at tjenestene blir tilgjengelig for sluttbrukerne. Altinn-rollene er knyttet til et sett med eksterne roller fra Enhetsregisteret (ER), og når tjenesteeier skal velge hvilke(n) Altinn-rolle® som skal gi tilgang til tjenesten,er det viktig å tenke over en del ting:
+          </p>
+
+          <ul>
+            <li>Hvem skal bruke tjenesten – det må velges en eller flere roller som sikrer at alle aktuelle avgivere har tilgang til tjenesten. Ulike organisasjonstyper registrerer ulike typer eksterne roller i ER, og tjenesteeier må velge en Altinn-rolle som dekker ulike organisasjonstyper. F.eks vil et enkeltpersonsforetak kanskje bare ha innehaver registrert, mens et AS har både daglig leder, styreleder og revisor. Hvis både ENK’et og AS’et skal kunne benytte tjenesten, må Altinn-rollen som knyttes til tjenesten være knyttet til både Innehaver og Daglig leder, Styreleder eller Revisor. Tilgjengelige roller finnes på “rolleadministrasjonssiden” i TUL og i <a href="https://www.altinn.no/no/Portalhjelp/Administrere-rettigheter-og-prosessteg/Rolleoversikt">portalhjelpen</a> i SBL.
+            </li>
+
             <li>Skal ulike roller har tilgang til å utføre ulike operasjoner på tjenesten? Dette kan man skille på i rolletilknytningen. Vær i midlertid oppmerksom på at Altinn kun sjekker at man har lese-tilgang til tjenesten ved instansiering. Hvis man ønsker en mer detaljert autorisasjonssjekk, må dette implementeres i tjenesteeiers tjeneste-applikasjon.
             </li>
           </ul>
 
-          <h3 id="5-4-bruk-av-altinns-autorisasjonswebservice">
+          <h2 id="5-4-bruk-av-altinns-autorisasjonswebservice">
             5.4 Bruk av Altinns autorisasjonswebservice
-          </h3>
+          </h2>
 
           <p>
             Altinns webservice for autorisasjon kan benyttes av tjenesteiere til å foreta autorisasjonsbeslutninger basert på rolle og rettighetsregler og delegeringer som ligger i Altinns autorisasjonsdatabase. Dette gjør at eksterne tjenester som ikke benytter Altinns tjenestemotor likevel kan benytte Altinns autorisasjonsmodell på tjenesten. For lenketjenester, for eksempel en tjeneste hvor avgiver kan være en organisasjon, er dette sentralt.
@@ -1189,9 +1329,9 @@
   &lt;/s:Body&gt;
 &lt;/s:Envelope&gt;
 </code></pre>
-          <h5 id="feilsituasjoner">
+          <h4 id="feilsituasjoner">
             Feilsituasjoner
-          </h5>
+          </h4>
 
           <p>
             Dersom nøkkelen er ugyldig (for eksempel, på grunn av timeout, eller tidligere bruk) vil operasjonen returnere en Altinnfault. Den eksterne tjenesten bør da presentere en feilmelding for sluttbruker, og gi sluttbruker mulighet til å gå tilbake til Altinn (dyplenken til tjenesten) for å starte tjenesten på ny.
@@ -1338,7 +1478,7 @@
                   YT2 YT AT8 AT3 AT4 AT5 TT1 TT2 Prod
                 </td>
                 <td>
-                  <code>&lt;Attribute AttributeId="urn:oasis:names:tc:xacml:2.0: action:urn:altinn:environment"DataType="http://www.w3.org/2001/XMLSchema#string"&gt; &lt;AttributeValue&gt;PR&lt;/AttributeValue&gt; &lt;/Attribute&gt;</code>
+                  <code>&lt;Attribute AttributeId="urn:oasis:names:tc:xacml:2.0: action:urn:altinn:environment"DataType="http://www.w3.org/2001/XMLSchema#string"&gt; &lt;AttributeValue&gt;PROD&lt;/AttributeValue&gt; &lt;/Attribute&gt;</code>
                 </td>
               </tr>
             </tbody>
@@ -1388,9 +1528,9 @@
             Nedenfor vises eksempler på gyldig forespørsler:
           </p>
 
-          <h5 id="authorizationrequest">
+          <h4 id="authorizationrequest">
             AuthorizationRequest:
-          </h5>
+          </h4>
 
           <pre><code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;Request
@@ -1440,9 +1580,9 @@
             Operasjonen returnerer XML som også følger XACML standarden. Under vises et eksempel på en response.
           </p>
 
-          <h5 id="authorizationresponse">
+          <h4 id="authorizationresponse">
             AuthorizationResponse:
-          </h5>
+          </h4>
 
           <pre><code class="language-xml">&lt;xacml:Response xmlns:tns="urn:oasis:names:tc:xacml:2.0:policy:schema:os" xmlns:xacml="urn:oasis:names:tc:xacml:2.0:context:schema:os" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xacml:2.0:context:schema:os http://docs.oasis-open.org/xacml/2.0/access_control-xacml-2.0-context-schema-os.xsd"&gt;
   &lt;xacml:Result ResourceId=""&gt;
@@ -1489,9 +1629,9 @@
             <strong>Feilsituasjoner</strong> Dersom Altinn ikke klarte å gjøre en korrekt beslutning for parameterne spesifisert i requesten, vil XACML responsen fra Altinn indikerere dette (<a href="xacml:Decision">xacml:Decision</a>Indeterminate<a href="/xacml:Decision">/xacml:Decision</a>). Ved annen teknisk feil vil operasjonen returnere en Altinnfault. Den eksterne tjenesten bør da presentere en feilmelding for sluttbruker, og gi sluttbruker mulighet til å gå tilbake til Altinn (dyplenken til tjenesten) for å starte tjenesten på ny.
           </p>
 
-          <h5 id="5-4-3-authorizationadministrationexternal-getreportees">
+          <h4 id="5-4-3-authorizationadministrationexternal-getreportees">
             5.4.3 AuthorizationAdministrationExternal.GetReportees
-          </h5>
+          </h4>
 
           <p>
             Metoden GetReportees returnerer alle mulige avgivere for en person (identifisert med fødselsnummer) uavhengig av hvilke roller/rettigheter denne personen har for avgiveren. Dermed må det også ved bruk av denne tjenesten utføres en påfølgende autorisasjonssjekk med XACML webservice mot en lenketjeneste som rollekravene for den eksterne tjenesten kan knyttes til.
@@ -1506,22 +1646,13 @@
           </p>
 
           <ol>
-            <li>
-              <p>
-                Opprette lenketjeneste i Altinn og knytte den til en Altinn rolle. Dette gjør at roller/rettigheter for tjenesten kan delegeres i Altinns rolledelegeringside.
-              </p>
+            <li>Opprette lenketjeneste i Altinn og knytte den til en Altinn rolle. Dette gjør at roller/rettigheter for tjenesten kan delegeres i Altinns rolledelegeringside.
             </li>
 
-            <li>
-              <p>
-                Implementere valg av avgiver i egen portal og bruke GetReportees til å få liste over mulige avgivere fra Altinn.
-              </p>
+            <li>Implementere valg av avgiver i egen portal og bruke GetReportees til å få liste over mulige avgivere fra Altinn.
             </li>
 
-            <li>
-              <p>
-                Implementere bruk av AuthorizeAccessExternal til å sjekke at brukeren har rettighet på tjenesten til til tjenesteier for valgt avgiver.
-              </p>
+            <li>Implementere bruk av AuthorizeAccessExternal til å sjekke at brukeren har rettighet på tjenesten til til tjenesteier for valgt avgiver.
             </li>
           </ol>
 
@@ -1731,9 +1862,9 @@
             Dersom det fødselsnummeret spesifisert er ugyldig vil Altinn returnere en Altinnfault
           </p>
 
-          <h4 id="6-feilsituasjoner-i-produksjon">
+          <h3 id="6-feilsituasjoner-i-produksjon">
             6 Feilsituasjoner i produksjon
-          </h4>
+          </h3>
 
           <p>
             Dersom det oppdages feil ved bruk av lenketjenesten, er det viktig at det indentifiseres hvor feilen ligger. Feil i forbindelse med føderering fra IDPorten skal meldes til IDPorten og ikke til Altinn.
@@ -1753,7 +1884,7 @@
       </div>
 
       <div id="navigation">
-        <a class="nav nav-prev" href="/docs/guides/integrasjon/" title="Integrasjon"><i class="fa fa-chevron-left"></i></a> <a class="nav nav-next" href="/docs/tjenestekatalog/" title="Tjenestekatalog" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        <a class="nav nav-prev" href="/docs/guides/digital-post-til-virksomheter/sp%C3%B8rsm%C3%A5lsvar/" title="Spørsmål og svar om DPV"><i class="fa fa-chevron-left"></i></a> <a class="nav nav-next" href="/docs/altinncore/" title="Tjenester 3.0" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
       </div>
     </section>
 
