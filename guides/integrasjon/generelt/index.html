@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="generator" content="Hugo 0.30.2">
-    <meta name="description" content="Generelt om Altinns REST-apier">
+    <meta name="description" content="Generelt om Altinns grenesesnitt for integrasjon">
     <title>
       Generelt :: Altinn docs
     </title>
@@ -60,10 +60,6 @@
                         <a href="/docs/guides/integrasjon/generelt/overordnet/"><span>Overordnet</span></a>
                       </li>
 
-                      <li data-nav-id="/docs/guides/integrasjon/generelt/om-api/" class="dd-item">
-                        <a href="/docs/guides/integrasjon/generelt/om-api/"><span>Om API</span></a>
-                      </li>
-
                       <li data-nav-id="/docs/guides/integrasjon/generelt/api-key/" class="dd-item">
                         <a href="/docs/guides/integrasjon/generelt/api-key/"><span>API-key</span></a>
                       </li>
@@ -86,7 +82,7 @@
                       </li>
 
                       <li data-nav-id="/docs/guides/integrasjon/tjenesteeiere/api/" class="dd-item">
-                        <a href="/docs/guides/integrasjon/tjenesteeiere/api/"><span>API</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
+                        <a href="/docs/guides/integrasjon/tjenesteeiere/api/"><span>REST API</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
                         <ul>
                           <li data-nav-id="/docs/guides/integrasjon/tjenesteeiere/api/registrering/" class="dd-item">
                             <a href="/docs/guides/integrasjon/tjenesteeiere/api/registrering/"><span>Registrering</span></a>
@@ -129,8 +125,99 @@
                     <a href="/docs/guides/integrasjon/sluttbrukere/"><span>Sluttbrukere</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
                     <ul>
                       <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/" class="dd-item">
-                        <a href="/docs/guides/integrasjon/sluttbrukere/api/"><span>API</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
+                        <a href="/docs/guides/integrasjon/sluttbrukere/api/"><span>REST API</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
                         <ul>
+                          <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/kom-i-gang/" class="dd-item">
+                            <a href="/docs/guides/integrasjon/sluttbrukere/api/kom-i-gang/"><span>Kom i gang!</span></a>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/autentisering/" class="dd-item">
+                            <a href="/docs/guides/integrasjon/sluttbrukere/api/autentisering/"><span>Autentisering</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
+                            <ul>
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/autentisering/brukernavn-og-passord/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/autentisering/brukernavn-og-passord/"><span>Brukernavn og passord</span></a>
+                              </li>
+
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/autentisering/id-porten/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/autentisering/id-porten/"><span>ID-porten</span></a>
+                              </li>
+
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/autentisering/virksomhetssertifikat/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/autentisering/virksomhetssertifikat/"><span>Virksomhets­sertifikat</span></a>
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/autorisasjon/" class="dd-item">
+                            <a href="/docs/guides/integrasjon/sluttbrukere/api/autorisasjon/"><span>Autorisasjon</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
+                            <ul>
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/autorisasjon/roller-og-rettigheter/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/autorisasjon/roller-og-rettigheter/"><span>Roller og rettigheter</span></a>
+                              </li>
+
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/autorisasjon/rolledefinisjoner/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/autorisasjon/rolledefinisjoner/"><span>Rolle­definisjoner</span></a>
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/innsyn/" class="dd-item">
+                            <a href="/docs/guides/integrasjon/sluttbrukere/api/innsyn/"><span>Innsyns­tjenester</span></a>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/meldinger/" class="dd-item">
+                            <a href="/docs/guides/integrasjon/sluttbrukere/api/meldinger/"><span>Meldingsboks</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
+                            <ul>
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/meldinger/hente/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/meldinger/hente/"><span>Hente</span></a>
+                              </li>
+
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/meldinger/oppdatere/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/meldinger/oppdatere/"><span>Oppdatere</span></a>
+                              </li>
+
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/meldinger/sende-inn/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/meldinger/sende-inn/"><span>Sende inn</span></a>
+                              </li>
+
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/meldinger/signere/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/meldinger/signere/"><span>Signere</span></a>
+                              </li>
+
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/meldinger/slette/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/meldinger/slette/"><span>Slette</span></a>
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/diverse/" class="dd-item">
+                            <a href="/docs/guides/integrasjon/sluttbrukere/api/diverse/"><span>Diverse</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
+                            <ul>
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/diverse/profil/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/diverse/profil/"><span>Profil</span></a>
+                              </li>
+
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/diverse/metadata/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/diverse/metadata/"><span>Metadata</span></a>
+                              </li>
+
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/diverse/samtykke/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/diverse/samtykke/"><span>Samtykke</span></a>
+                              </li>
+
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/diverse/formidling/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/diverse/formidling/"><span>Formidling</span></a>
+                              </li>
+
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/diverse/betaling/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/diverse/betaling/"><span>Betaling</span></a>
+                              </li>
+
+                              <li data-nav-id="/docs/guides/integrasjon/sluttbrukere/api/diverse/referanse-app/" class="dd-item">
+                                <a href="/docs/guides/integrasjon/sluttbrukere/api/diverse/referanse-app/"><span>Referanse-app</span></a>
+                              </li>
+                            </ul>
+                          </li>
                         </ul>
                       </li>
 
@@ -454,14 +541,14 @@
               <li data-nav-id="/docs/guides/digital-post-til-virksomheter/" class="dd-item">
                 <a href="/docs/guides/digital-post-til-virksomheter/"><span>Digital Post til Virksomheter</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
                 <ul>
-                  <li data-nav-id="/docs/guides/digital-post-til-virksomheter/sp%C3%B8rsm%C3%A5lsvar/" class="dd-item">
-                    <a href="/docs/guides/digital-post-til-virksomheter/sp%C3%B8rsm%C3%A5lsvar/"><span>Spørsmål og svar om DPV</span></a>
+                  <li data-nav-id="/docs/guides/digital-post-til-virksomheter/sp%C3%B8rsm%C3%A5l-og-svar/" class="dd-item">
+                    <a href="/docs/guides/digital-post-til-virksomheter/sp%C3%B8rsm%C3%A5l-og-svar/"><span>Spørsmål og svar om DPV</span></a>
                   </li>
                 </ul>
               </li>
 
-              <li data-nav-id="/docs/guides/lenketjenester/" class="dd-item">
-                <a href="/docs/guides/lenketjenester/"><span>Lenketjenester</span></a>
+              <li data-nav-id="/docs/guides/autorisasjon/" class="dd-item">
+                <a href="/docs/guides/autorisasjon/"><span>Autorisasjon</span></a>
               </li>
             </ul>
           </li>
@@ -501,6 +588,10 @@
               <li data-nav-id="/docs/releases/2017/" class="dd-item">
                 <a href="/docs/releases/2017/"><span>2017</span> <i class="fa fa-angle-right fa-lg category-icon"></i></a>
                 <ul>
+                  <li data-nav-id="/docs/releases/2017/17-3/" class="dd-item">
+                    <a href="/docs/releases/2017/17-3/"><span>17.3</span></a>
+                  </li>
+
                   <li data-nav-id="/docs/releases/2017/17-2/" class="dd-item">
                     <a href="/docs/releases/2017/17-2/"><span>17.2</span></a>
                   </li>
@@ -598,7 +689,7 @@
           </h1>
 
           <p>
-            Generell info om integrasjon, grensesnitt og API’er.
+            Generell info om in tegrasjon, grensesnitt og API’er.
           </p>
 
           <ul class="children children-li">
@@ -608,14 +699,6 @@
 
             <p>
               Overordnet informasjon om integrasjon mot Altinn.
-            </p>
-
-            <li>
-              <a href="/docs/guides/integrasjon/generelt/om-api/">Om API</a>
-            </li>
-
-            <p>
-              Generelt om Altinns REST-apier
             </p>
 
             <li>
