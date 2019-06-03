@@ -130,8 +130,8 @@ h2:hover .anchor, h3:hover .anchor, h4:hover .anchor, h5:hover .anchor, h6:hover
 
 /* Redfines headers style */
 
-p, a, h2, h3, h4, h5, h6 {
-    letter-spacing: 0.1px; 
+p, a, h1, h2, h3, h4, h5, h6 {
+    letter-spacing: 0.3px; 
 }
 
 h1 {
@@ -218,37 +218,34 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     fill: #fff;
 }
 .searchbox {
-    margin-top: 1rem;
     position: relative;
-    border: 1px solid  #6996e2;
-    border-radius: 4px;
+    border: 2px solid  #1eaef7;
     background-color: transparent;
     color: #000;
+    height: 36px;
 }
 .searchbox label {
-    color: rgba(255, 255, 255, 0.8);
     position: absolute;
     left: 10px;
-    top: 3px;
+    top: 2px;
 }
 .searchbox span {
-    color: rgba(255, 255, 255, 0.6);
+    color:#BCC7CC;
     position: absolute;
     right: 10px;
     top: 3px;
     cursor: pointer;
 }
 .searchbox span:hover {
-    color: rgba(255, 255, 255, 0.9);
+    color: #6a6a6a;
 }
 .searchbox input {
     display: inline-block;
-    color: #fff;
     width: 100%;
     height: 30px;
     background: transparent;
     border: 0;
-    padding: 0 25px 0 30px;
+    padding: 2px 25px 0 30px;
     margin: 0;
     font-weight: 300;
 }
@@ -264,6 +261,8 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 .searchbox input:-ms-input-placeholder {
     color: rgba(255, 255, 255, 0.6);
 }
+
+/* SIDEBAR TOGGLE */ 
 #sidebar-toggle-span {
     display: none;
 }
@@ -272,6 +271,8 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
         display: inline;
     }
 }
+
+/* SIDEBAR */
 #sidebar {
     background-color: transparent;
     color: #000;
@@ -279,7 +280,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     top: 0;
     width: 270px;
     bottom: 0;
-    left: 0;
+    left: -294px;
     font-weight: normal;
     font-size: 16px;
     line-height: 27px;
@@ -294,6 +295,30 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
         position: relative;
         float: left;
         width: 230px;
+        left: 0;
+    }
+}
+
+@media only all and (max-width: 47.938em) {
+    .sidebar-hidden {
+        overflow: hidden;
+    }
+    .sidebar-hidden #sidebar {
+        left: 12px;
+    }
+    .sidebar-hidden #body {
+        margin-left: 294px;
+        overflow: hidden;
+    }
+    .sidebar-hidden #overlay {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 10;
+        background: rgba(255, 255, 255, 0.8);
+        cursor: pointer;
     }
 }
 
@@ -478,18 +503,17 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     font-family: 'DIN-bold';
 }
 
-
 #main {
     background: #f7f7f7;
     margin: 0 0 1.563rem 0;
 }
 #body {
     position: relative;
-    margin-left: 300px;
+    margin-left: 0;
     min-height: 100%;
 }
 
-@media (min-width: 768px) {
+@media only all and (min-width: 768px) {
     #body {
         margin-left: 256px;
     }
@@ -937,9 +961,6 @@ td {
 #github-contrib i {
     vertical-align: middle;
 }
-.featherlight img {
-    margin: 0 !important;
-}
 .lifecycle #body-inner ul {
     list-style: none;
     margin: 0;
@@ -1045,44 +1066,6 @@ td {
 }
 #body #breadcrumbs span.adocs-breadcrumb-divider {
     padding: 0 6px;
-}
-@media only all and (max-width: 59.938em) {
-    #sidebar {
-        width: 230px;
-    }
-    #body {
-        margin-left: 230px;
-    }
-}
-@media only all and (max-width: 47.938em) {
-    #sidebar {
-        width: 230px;
-        left: -294px;
-    }
-    #body {
-        margin-left: 0;
-        width: 100%;
-    }
-    .sidebar-hidden {
-        overflow: hidden;
-    }
-    .sidebar-hidden #sidebar {
-        left: 12px;
-    }
-    .sidebar-hidden #body {
-        margin-left: 294px;
-        overflow: hidden;
-    }
-    .sidebar-hidden #overlay {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        z-index: 10;
-        background: rgba(255, 255, 255, 0.8);
-        cursor: pointer;
-    }
 }
 .copy-to-clipboard {
     background-image: url(../images/clippy.svg);
@@ -1299,6 +1282,8 @@ ul.a-text.a-bullet-list:not(.connected-bullets):not(.no-decoration):not(.a-list)
     }
     .a-header a,
     .a-globalNav-main li a,
+    .a-globalNav-main li a:active, 
+    .a-globalNav-main li a:focus, 
     .a-globalNav-main li a:hover {
         color:#fff;
     }
@@ -1351,12 +1336,6 @@ ul.a-text.a-bullet-list:not(.connected-bullets):not(.no-decoration):not(.a-list)
 .adocs-toggle-search:focus,
 .adocs-toggle-search:active {
     color: #fff;
-}
-
-@media (min-width: 992px) {
-    .a-header-options .nav-link { 
-        padding-top: 3px;
-    }
 }
 
 /* Collapsable search input */ 
@@ -1620,6 +1599,14 @@ input[type="search"] {
     .adocs-content {
         padding: 36px 60px;
     }
+}
+
+figcaption {
+    margin-top: 36px;
+}
+
+figure img {
+    margin: auto;
 }
 
 /* Linebreak for long links */

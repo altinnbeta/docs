@@ -14,7 +14,6 @@
     <link href="/docs/css/nucleus.css" rel="stylesheet">
     <link href="/docs/css/font-awesome.min.css" rel="stylesheet">
     <link href="/docs/css/hybrid.css" rel="stylesheet">
-    <link href="/docs/css/featherlight.min.css" rel="stylesheet">
     <link href="/docs/css/horsey.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fortawesome.com/kits/ed31cded/publications/73562/woff2.css" media="all">
     <link href="/docs/css/altinninfoportal.css" rel="stylesheet">
@@ -27,6 +26,7 @@
 
     
 <link href="/docs/css/altinndigital.css" rel="stylesheet"> 
+<link href="/docs/css/custom.css" rel="stylesheet">
 
     <style>
       :root #header + #content > #left > #rlblock_left {
@@ -115,15 +115,12 @@
 
           <li class="nav-item dropdown d-none d-md-block">
             
-            <a data-toggle="collapse" id="adocs-collapse-search"
-              href="#accordianHeader93f2dedd-9234-4ef1-b0cd-464cb16e6848" aria-expanded="false"
-              class="a-collapse-title nav-link adocs-toggle-search">
-              <span>
-                <i class="ai ai-search" aria-hidden="true">
-                  <span class="sr-only">Søk</span></i>
-              </span>
-            </a>
-
+            <button class="a-collapse-title nav-link adocs-toggle-search" type="button" data-toggle="collapse" data-target="#collapseSearchContent" aria-expanded="false" aria-controls="collapseSearchContent">
+                <span>
+                    <i class="ai ai-search" aria-hidden="true">
+                      <span class="sr-only">Søk</span></i>
+                  </span>
+              </button>
           </li>
         </ul>
       </div>
@@ -133,19 +130,18 @@
 
 
 
-<div id="accordianHeader93f2dedd-9234-4ef1-b0cd-464cb16e6848" class="a-collapseContent adocs-collapseSearch collapse" role="tabpanel"
-  aria-expanded="false" data-parent="#HelpAccordians" style="">
+<div id="collapseSearchContent" class="a-collapseContent adocs-collapseSearch collapse">
   <div class="a-collapseContent-inside px-0">
     <div class="bg-white pt-3 pb-3">
       <div class="container">
         <div class="row arrow-tr">
           <div class="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3">
             <div class="form-group a-form-group  a-form-group-large">
-              <label class="a-h2" for="search">Hva leter du etter?</label>
+              <label class="a-h2" for="topbar-search-by">Hva leter du etter?</label>
               <div class="a-form-group-items input-group">
-                <input data-search-input id="search-by" class="form-control a-hasButton" type="text" placeholder="Søk etter innhold" autofocus>
+                <input data-search-input id="topbar-search-by" class="form-control a-hasButton" type="text" placeholder="Søk etter innhold" autofocus>
                 <div class="input-group-append">
-                  <button class="btn btn-secondary" type="submit" name="search-button" id="search-submit" aria-label="Search">
+                  <button class="btn btn-secondary" type="submit" name="search-button" id="topbar-search-submit" aria-label="Search">
                     <i class="ai ai-search" aria-hidden="true"></i>
                     <span class="sr-only">Søk</span>
                   </button>
@@ -174,18 +170,21 @@
 <div class="highlightable">
   <div id="header-wrapper">
     
-        <div class="searchbox">
-    <label for="search-by"><i class="fa fa-search"></i></label>
-    <input data-search-input id="search-by" type="text" placeholder="Søk...">
-    <span data-search-clear=""><i class="fa fa-close"></i></span>
+        <div class="form-group a-form-group ">
+    <label class="a-form-label sr-only" for="searchdocumentation">Søk i dokumentasjonen</label>
+    
+    <div class="a-form-group-items input-group">
+    
+        <input id="searchdocumentation" class="form-control a-hasButton" type="search" placeholder="Søk i dokumentasjonen" name="input-field" data-val="true">
+    
+        <div class="input-group-append">
+            <button class="btn btn-secondary" type="button" id="searchdocumentation-submit">
+                <i class="ai ai-search"></i>
+                <span class="sr-only">Søk</span>
+            </button>
+        </div>
+    </div>
 </div>
-<script src="/docs/js/lunr.min.js"></script>
-<script src="/docs/js/horsey.js"></script>
-<script>
-    var baseurl = "https:\/\/altinn.github.io\/docs\/";
-</script>
-<script src="/docs/js/search.js"></script>
-
 
     
   </div>
@@ -769,6 +768,195 @@
           
           
         
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/docs/api/soap/kom-i-gang/" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/docs/api/soap/kom-i-gang/">
+        <span>Kom i gang med SOAP API</span>
+
+        
+        
+
+        
+      </a>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/docs/api/soap/grensesnitt/" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/docs/api/soap/grensesnitt/">
+        <span>Grensesnitt</span>
+
+        
+        
+
+        
+      </a>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/docs/api/soap/endepunkter-oversikt/" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/docs/api/soap/endepunkter-oversikt/">
+        <span>Endepunkter</span>
+
+        
+        
+
+        
+      </a>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/docs/api/soap/funksjonelle-scenario/" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/docs/api/soap/funksjonelle-scenario/">
+        <span>Funksjonelle scenario</span>
+
+        
+        
+
+        
+      </a>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/docs/api/soap/roller-og-rettigheter/" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/docs/api/soap/roller-og-rettigheter/">
+        <span>Roller og rettigheter</span>
+
+        
+        
+
+        
+      </a>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/docs/api/soap/skjemasett-sammenlikning/" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/docs/api/soap/skjemasett-sammenlikning/">
+        <span>Skjemasett sammenligning</span>
+
+        
+        
+
+        
+      </a>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/docs/api/soap/teknisk-implementasjon/" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/docs/api/soap/teknisk-implementasjon/">
+        <span>Sikkerhet og feilkoder</span>
+
+        
+        
+
+        
+      </a>
+              
+    </li>
+  
+ 
+
+            
           
         
         </ul>
@@ -5228,9 +5416,27 @@ Denne ble produksjonssatt 4. april <a href="https://www.digi.no/artikler/lover-m
 <p>Prosessen med å legge til nye tjenester i en lokal rolle forenkles. I stedet for å måtte legge til en og en tjeneste skal administrator kunne legge til flere tjenester i en operasjon. Det vil også bli mulig å administrere flere tjenester i samme skjermbilde. Eier av tjenesten skal også vises i søkevinduet slik at det er lettere å velge riktig tjeneste.
 Dette ble <a href="/docs/releases/2019/19-5/#forenkle-prosessen-med-opprettelse-av-lokal-rolle-som-skal-inneholde-mange-rettigheter">levert i release 19.5</a>.</p>
 
-<h3 id="altinn-skytjenester">Altinn skytjenester</h3>
+<h3 id="altinn-skytjenester">✔️ Altinn skytjenester</h3>
 
-<p>Det skal etableres Altinn testmiljø i sky. Miljøene skal benyttes til å teste tjenester utviklet i Altinn Studio, samt endringer i sluttbrukerløsningen.</p>
+<p>Det skal etableres Altinn testmiljø i sky. Miljøene skal benyttes til å teste tjenester utviklet i Altinn Studio, samt endringer i sluttbrukerløsningen.<br />
+Ble levert i mai 2019.</p>
+
+<h3 id="publisering-av-hendelser-på-rest-api-for-tjenesteeier">Publisering av hendelser på REST-API for tjenesteeier</h3>
+
+<p>Det vil bli mulig å hente ut status på meldinger og varsler ved at det i Altinn publiseres en feed for hendelser. Denne feed vil på sikt erstatte dagens SOAP-operasjoner for meldingshistorikk. Dataene i feeden vil i første omgang ha levetid på 30 dager.</p>
+
+<h3 id="opprette-rolle-for-hovedadministrator">✔️ Opprette rolle for hovedadministrator</h3>
+
+<p>Det blir nå mulig for daglig leder/styrets leder eller tilsvarende rolleinnehaver i Enhetsregisteret å peke ut en eller flere tiltrodde medarbeidere i organisasjonen som hovedadministrator for å håndtere all tilgangsstyring i Altinn på vegne av virksomheten. Disse personene vil kunne delegere roller og rettigheter de selv ikke innehar til andre og til seg selv. Dette gjelder også fremtidige roller og rettigheter som opprettes.</p>
+
+<p>Det vil også være mulig for privatpersoner å utnevne en hovedadministrator på vegne av seg selv.</p>
+
+<h1 id="q3-2019">Q3 - 2019</h1>
+
+<h3 id="sanering-i-tjenesteeieres-arkiv">Sanering i tjenesteeieres arkiv</h3>
+
+<p>Tjenesteeieres arkiv er der tjenesteeiere i Altinn kan se elementer som tilhører egen virksomhet.
+Det skal gjennomføres en revisjon av lagringstid for tjenester i dette arkivet. Det er sendt ut varsel om dette til tjenesteeiere.</p>
 
 <h3 id="ny-innlesing-av-enhetsregisteret">Ny innlesing av Enhetsregisteret</h3>
 
@@ -5240,21 +5446,6 @@ Dette ble <a href="/docs/releases/2019/19-5/#forenkle-prosessen-med-opprettelse-
 <li>Tilpasning/utvidelse av <a href="https://www.brreg.no/om-oss/oppgavene-vare/alle-registrene-vare/om-enhetsregisteret/">Enhetsregisteret</a> i Altinn</li>
 <li>Full re-innlesing av Enhetsregisteret i Altinn</li>
 </ul>
-
-<h3 id="sanering-i-tjenesteeieres-arkiv">Sanering i tjenesteeieres arkiv</h3>
-
-<p>Tjenesteeieres arkiv er der tjenesteeiere i Altinn kan se elementer som tilhører egen virksomhet.
-Det skal gjennomføres en revisjon av lagringstid for tjenester i dette arkivet. Det er sendt ut varsel om dette til tjenesteeiere.</p>
-
-<h3 id="publisering-av-hendelser-på-altinns-rest-api-for-tjenesteeier">Publisering av hendelser på Altinns REST-api for tjenesteeier</h3>
-
-<p>Det vil bli mulig å hente ut status på meldinger og varsler ved at det i Altinn publiseres en feed for hendelser. Denne feed vil på sikt erstatte dagens SOAP-operasjoner for meldingshistorikk. Dataene i feeden vil i første omgang ha levetid på 30 dager.</p>
-
-<h3 id="opprette-rolle-for-hovedadministrator">Opprette rolle for hovedadministrator</h3>
-
-<p>Det blir nå mulig for daglig leder/styrets leder eller tilsvarende rolleinnehaver i Enhetsregisteret å peke ut en eller flere tiltrodde medarbeidere i organisasjonen som hovedadministrator for å håndtere all tilgangsstyring i Altinn på vegne av virksomheten. Disse personene vil kunne delegere roller og rettigheter de selv ikke innehar til andre og til seg selv. Dette gjelder også fremtidige roller og rettigheter som opprettes.</p>
-
-<p>Det vil også være mulig for privatpersoner å utnevne en hovedadministrator på vegne av seg selv.</p>
 
 <h3 id="håndtering-av-meldinger-og-skjema-med-særlig-sensitivt-innhold-til-organisasjoner">Håndtering av meldinger og skjema med særlig sensitivt innhold til organisasjoner</h3>
 
@@ -5272,10 +5463,6 @@ Det blir nå mulig å sende meldinger/opprette skjema til virksomheten som ingen
 <li>legge til rette for at ansatte selv kan be om rettigheter</li>
 </ul>
 
-<h3 id="autorisasjon-for-tjenester-3-0">Autorisasjon for Tjenester 3.0</h3>
-
-<p>Det skal etableres støtte for å kunne autorisere applikasjoner utviklet i Tjenester 3.0.</p>
-
 <h3 id="tilby-rest-grensesnitt-for-å-opprette-persistent-samtykkeforespørsel-og-oppdatere-tjenesteeierstyrt-rettighetsregister-srr">Tilby REST grensesnitt for å opprette (persistent) samtykkeforespørsel og oppdatere tjenesteeierstyrt rettighetsregister (SRR)</h3>
 
 <p>Det blir nå mulig å ta i bruk en mer robust løsning for å be om - og gi samtykke.</p>
@@ -5283,15 +5470,16 @@ Det blir nå mulig å sende meldinger/opprette skjema til virksomheten som ingen
 <p>Dagens løsning for å opprette et samtykke benytter url for å sende parametre til en samtykkeside som skal vises for den som skal gi samtykke.
 Tjenesteeier må bruke webService for å registre regler knyttet til bruk av samtykke. Denne tjenesten er konstruert slik at det er lett for Tjenesteeier å gjøre feil.</p>
 
-<p>Med denne endringen tilbys to nye REST-tjenester:
-* REST for å opprette samtykkeforespørsel. Aktør som ønsker samtykke kaller en REST-tjeneste med nødvendige parametre for å registrere en samtykkeforespørsel. Altinn returnerer en GUID som senere brukes for å sende bruker videre til samtykkedialogen.
-* REST for å oppdatere tjenesteeierstyrt rettighetsregister (SRR) hvor regler endres ved å sende verdier i en godt definert liste</p>
+<p>Med denne endringen tilbys to nye REST-tjenester:</p>
+
+<ul>
+<li>REST for å opprette samtykkeforespørsel. Aktør som ønsker samtykke kaller en REST-tjeneste med nødvendige parametre for å registrere en samtykkeforespørsel. Altinn returnerer en GUID som senere brukes for å sende bruker videre til samtykkedialogen.</li>
+<li>REST for å oppdatere tjenesteeierstyrt rettighetsregister (SRR) hvor regler endres ved å sende verdier i en godt definert liste</li>
+</ul>
 
 <h3 id="ny-brukerdialog-for-å-be-om-og-gi-rettighet">Ny brukerdialog for å be om - og gi rettighet</h3>
 
 <p>Det blir nå mulig for sluttbruker å &ldquo;be om tilgang&rdquo; til en bestemt rolle eller utføre en bestemt tjeneste. En forespørsel vil da gå til de i virksomheten som har administratormyndighet og som kan ta stilling til om rettighet skal innvilges eller ikke. Endringen omfatter ny dialog og brukergrensesnitt som skal brukes for de som ber om rettighet samt for de som skal gi rettighet.</p>
-
-<h1 id="q3-2019">Q3 - 2019</h1>
 
 <h3 id="utfasing-av-støtte-for-tls-1-1-og-1-0">Utfasing av støtte for TLS 1.1 og 1.0</h3>
 
@@ -5299,41 +5487,10 @@ Tjenesteeier må bruke webService for å registre regler knyttet til bruk av sam
 Støtte for TLS 1.0 og 1.1 skal fjernes for all inngående trafikk til Altinn. Altinn vil kun støtte inngående trafikk basert på TLS 1.2.
 Driftsvarsling er sendt ut til tjenesteeiere og sluttbrukersystemleverandører.</p>
 
-<h3 id="konsolidering-av-brukere-med-d-nummer">Konsolidering av brukere med D-nummer</h3>
-
-<p>Et <a href="https://www.skatteetaten.no/person/utenlandsk/norsk-identitetsnummer/d-nummer/">D-nummer</a> er et ikke-norsk ID-nummer utsted av Folkeregisteret til utenlandske personer.
-Et D-nummer kan brukes til pålogging i Idporten og en D-nummer bruker har egen innboks i Altinn som brukes til kommunikasjon med offentlige myndigheter.
-I noen tilfeller vil disse D-nummer personer få tildelt nye F-nummer, se <a href="https://www.skatteetaten.no/person/utenlandsk/norsk-identitetsnummer/derfor-trenger-du/">F-nummer</a>
-for mer informajson om når dette inntreffer.</p>
-
-<p>Ved overgang fra D-nummer til F-nummer vil bruker ikke lenger kunne bruke id-porten til pålogging og derfor heller ikke ha tilgang til sin gamle innboks i Altinn.
-Det skal etableres en løsning slik at bruker med D-nummer som har fått fødselsnummer fortsatt skal kunne få tilgang til det som lå i innboks/arkiv på
-D-nummer samt kunne videreføre en skattedialog som ble startet på D-nummer.</p>
-
 <h3 id="oppgradering-av-biztalk">Oppgradering av Biztalk</h3>
 
 <p>Biztalk skal oppgraderes til nyere versjon. Dette er et produkt som anvendes til forsendelse og mottak av data mellom Altinn og tjenesteeiere.
 Oppgraderingen planlegges gjennomført slik at eksisterende tjenester ikke skal påvirkes.</p>
-
-<h3 id="bedre-oversikt-over-rettigheter">Bedre oversikt over rettigheter</h3>
-
-<p>Det blir nå mulig å tilby bruker bedre og mer tilgjengelig oversikt over rettigheter.
-Det kan oppleves som vanskelig for sluttbruker å skaffe oversikt hva man selv kan gjøre og hva andre kan gjøre på vegene av valgt aktør.<br />
-Det skal etableres løsning som gir bruker bedre oversikt over:
-* hva jeg har og kan gjøre, dvs &ldquo;Min oversikt&rdquo;
-* hva andre kan gjøre på vegne av valgt aktør, dvs &ldquo;tilgangsstyrers oversikt&rdquo;</p>
-
-<h3 id="sikkerhet-i-eoppslag-felles-tjeneste-fra-maskinporten-og-altinn-autorisasjon">Sikkerhet i eOppslag - felles tjeneste fra Maskinporten og Altinn autorisasjon</h3>
-
-<p>Det blir nå mulig å bruke Altinns autorisasjonsløsning for å delegere tilgang til API.
-I samarbeid med <a href="https://difi.github.io/idporten-oidc-dokumentasjon/oidc_guide_maskinporten.html">Maskinporten</a> skal Altinn tilby en helheltilig løsning for å styre tilgang til API ved hjelp av
-OAuth2 token fra Maskinporten beriket med delegeringsinformasjon fra Altinns Autorisasjonsløsning.
-Et tenkt brukerscenario som skal løses er &ldquo;Leikanger Kommune har hjemmel til å hente informasjon fra NAV sitt API. Leikanger kommune ønsker at Evry skal bruke APIet for dem.&rdquo;</p>
-
-<p><img src="konseptskisse_sikkerhet_i_eoppslag.png?width=800" alt="Samhandling delegert til leverandør" /></p>
-
-<p>Løsningen skal også kunne integreres med <a href="https://fellesdatakatalog.brreg.no/apis">API-katalogen</a> slik at definert delegerbar ressurs og Oauth2 scope er synkronisert på tvers av de tre løsningene.
-Foreslått arkitektur for sikkerhet i eOppslag finnes skissert her: <a href="https://joergenb.github.io/oauth2-veileder/eoppslag_sbb_oauth2.html#forhold-til-fellesl%C3%B8sninger">eOppslag ABB</a>.</p>
 
 <h3 id="tjenester-3-0">Tjenester 3.0</h3>
 
@@ -5354,11 +5511,18 @@ og mulighet for å produksjonssette applikasjoner vil komme i Q3.</p>
 <p><img src="studio-arch.png?width=800" alt="Altinn Studio" /></p>
 
 <ol>
-<li>Tjenesteutvikler utvikler tjenester i Altinnstudio. Tjenesteutvikler migrerer tjenestene selv til Altinn Apps</li>
-<li>I Altinn Apps vil sluttbrukere få tilgang til og kunne arbeide med tjenester utviklet i Altinnstudio</li>
-<li>Altinn Plattform inneholder fellesfunksjoner og data/registre som deles på tvers av alle tjenester i Altinn Apps</li>
-<li>Tjenesteutvikler vil fortsatt kunne utvikle tjenester i TUL i en periode fremover. Det er kun leverandør som kan migrere disse tjenestene til produksjonsmiljøet</li>
-<li>Sluttbruker går inn på vanlige måte på www.altinn.no. Når bruker arbeider med en tjeneste utviklet i TUL vil dette skje på samme måte som tidligere. Denne tjenesten kjøres i sluttbrukerløsningen (SBL). Men, når bruker velger å arbeide med en tjeneste som er utviklet i Altinnstudio vil bruker kjøre denne tjenesten i skymiljøet Altinn Apps. Brukere vil oppleve en annen interaksjon og layout på  tjenester som kjører i Altinn Apps vs en tjeneste som kjører direkte i sluttbrukerløsningen. Skjermbilder og brukergrensesnitt vil oppleves mer moderne og fremtidsrettet i Altinn Apps</li>
+<li>Utvikler lager applikasjoner i Altinn Studio og migrerer selv til infrastrukturen Altinn Apps.</li>
+<li>I Altinn Apps vil brukere få tilgang til og kunne benytte applikasjonene.</li>
+<li>Altinn Platform inneholder bl.a. APIer for fellesfunksjoner og data/registre som deles på tvers av alle applikasjoner.</li>
+<li>Utviklere vil fortsatt kunne utvikle tjenester i TUL i en periode fremover. Det er kun leverandør som kan migrere disse tjenestene til produksjonsmiljøet</li>
+<li>Brukere går inn på vanlige måte på www.altinn.no, og finner elementer i sin innboks.
+
+<ul>
+<li>Når bruker benytter en tjeneste som er utviklet i TUL så vil dette skje på samme måte som tidligere, og denne vil kjøre i sluttbrukerløsningen (SBL).</li>
+<li>Når bruker benytter en app som er utviklet i Altinn Studio vil den kjøre i sky-infrastrukturen Altinn Apps.<br />
+Brukerene vil oppleve en annen interaksjon og layout på nye apps vs tjenester som kjører direkte i sluttbrukerløsningen.<br />
+Skjermbilder og brukergrensesnitt vil oppleves mer moderne og fremtidsrettet i Altinn Apps.</li>
+</ul></li>
 </ol>
 
 <p>All <a href="https://github.com/Altinn/altinn-studio">kode</a> og <a href="https://github.com/Altinn/altinn-studio/issues">backlog for utvikling</a> ligger åpent på GitHub.
@@ -5392,6 +5556,31 @@ Dette omfatter bruk av melding-, skjema-, innsyn-, autorisasjon/lenke-, integras
 
 <p>Som proffbruker av Altinn skal det kunne være mulig å tilpasse innboksen slik at den bedre ivaretar behovene, samt legger til rette
 for at en skal kunne gjøre fleksible søk på tvers av aktører.</p>
+
+<h3 id="bedre-oversikt-over-rettigheter">Bedre oversikt over rettigheter</h3>
+
+<p>Det blir nå mulig å tilby bruker bedre og mer tilgjengelig oversikt over rettigheter.
+Det kan oppleves som vanskelig for sluttbruker å skaffe oversikt hva man selv kan gjøre og hva andre kan gjøre på vegene av valgt aktør.</p>
+
+<p>Det skal etableres løsning som gir bruker bedre oversikt over:</p>
+
+<ul>
+<li>hva jeg har og kan gjøre, dvs &ldquo;Min oversikt&rdquo;</li>
+<li>hva andre kan gjøre på vegne av valgt aktør, dvs &ldquo;tilgangsstyrers oversikt&rdquo;</li>
+</ul>
+
+<h3 id="sikkerhet-i-eoppslag-felles-tjeneste-fra-maskinporten-og-altinn-autorisasjon">Sikkerhet i eOppslag - felles tjeneste fra Maskinporten og Altinn autorisasjon</h3>
+
+<p>Det blir nå mulig å bruke Altinns autorisasjonsløsning for å delegere tilgang til API.
+I samarbeid med <a href="https://difi.github.io/idporten-oidc-dokumentasjon/oidc_guide_maskinporten.html">Maskinporten</a> skal Altinn tilby en helhetlig løsning for å styre tilgang til API ved hjelp av
+OAuth2 token fra Maskinporten beriket med delegeringsinformasjon fra Altinns Autorisasjonsløsning.
+Et tenkt brukerscenario som skal løses er &ldquo;Leikanger Kommune har hjemmel til å hente informasjon fra NAV sitt API.
+Leikanger kommune ønsker at Evry skal bruke APIet for dem.&rdquo;</p>
+
+<p><img src="konseptskisse_sikkerhet_i_eoppslag.png?width=800" alt="Samhandling delegert til leverandør" /></p>
+
+<p>Løsningen skal også kunne integreres med <a href="https://fellesdatakatalog.brreg.no/apis">API-katalogen</a> slik at definert delegerbar ressurs og Oauth2 scope er synkronisert på tvers av de tre løsningene.
+Foreslått arkitektur for sikkerhet i eOppslag finnes skissert her: <a href="https://joergenb.github.io/oauth2-veileder/eoppslag_sbb_oauth2.html#forhold-til-fellesl%C3%B8sninger">eOppslag ABB</a>.</p>
 
 
 <footer class=" footline" >
@@ -8606,12 +8795,11 @@ for at en skal kunne gjøre fleksible søk på tvers av aktører.</p>
     <script src="/docs/js/altinndocs.js"></script>
     <script src="/docs/js/altinndocs-learn.js"></script>
 
-    <script type="text/javascript" src="/docs/js/stickysidebar/rAF.js"></script>
-    <script type="text/javascript" src="/docs/js/stickysidebar/ResizeSensor.js"></script>
-    <script type="text/javascript" src="/docs/js/stickysidebar/sticky-sidebar.js"></script>
+    <script src="/docs/js/stickysidebar/rAF.js"></script>
+    <script src="/docs/js/stickysidebar/ResizeSensor.js"></script>
+    <script src="/docs/js/stickysidebar/sticky-sidebar.js"></script>
     
-    <script type="text/javascript">
-
+    <script>
       var a = new StickySidebar('#sidebar', {
         topSpacing: 20,
         bottomSpacing: 60,
@@ -8625,7 +8813,7 @@ for at en skal kunne gjøre fleksible søk på tvers av aktører.</p>
     <script>mermaid.initialize({startOnLoad:true});</script>
 
     
-
+<script src="/docs/js/custom.js"></script>
 
   </body>
 </html>
