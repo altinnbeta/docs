@@ -121,7 +121,7 @@
   visibility:hidden;
   margin-left: 0.5em;
   position: absolute;
-  margin-top:0.1em;
+  margin-top:0.8em;
 }
 
 h2:hover .anchor, h3:hover .anchor, h4:hover .anchor, h5:hover .anchor, h6:hover .anchor {
@@ -136,6 +136,11 @@ p, a, h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-family: 'DIN-bold';
+}
+
+h1 sup {
+    top: -14px;
+    font-size: 16px;
 }
 
 h2,h3 {
@@ -394,6 +399,10 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 #sidebar h5.parent + ul.topics, #sidebar h5.active + ul.topics {
     display: block;
 }
+#sidebar sup {
+    top: -4px;
+    font-size: 12px;
+}
 #sidebar ul {
     list-style: none;
     padding: 0;
@@ -461,8 +470,11 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     color: #000 !important;
     margin-left: 0; 
     margin-right: 0; 
-    padding-left: 6px;
+    padding-left: 9px;
     padding-right: 1rem;
+}
+#sidebar ul ul li.active > a {
+    padding-left: 6px;
 }
 #sidebar ul li {
     padding: 0;
@@ -481,6 +493,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     white-space: nowrap;
     display: block;
     width: calc(100% - 20px);
+    display: inline;
 }
 #sidebar.showVisitedLinks ul li a span {
     width: calc(100% - 8px);
@@ -852,10 +865,7 @@ td {
 }
 .bullet-content {
     margin-left: 4.55rem;
-}
-.tooltipped {
-    position: relative;
-}
+}   
 .tooltipped:after {
     position: absolute;
     z-index: 1000000;
