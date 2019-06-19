@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.55.6" />
-    <meta name="description" content="Denne utviklingsguiden beskriver hvordan man teknisk og funksjonelt kan ta i bruk Betaling i Altinn for å gjøre betaling som del av en innsendingstjeneste eller frittstående.">
+    <meta name="description" content="Betaling i Altinn kan tas i bruk frittstående eller som del av en innsendingstjeneste.">
 
 
     
@@ -2119,7 +2119,7 @@ if(host != "localhost")
         
         ">
       <a href="/docs/utviklingsguider/samtykke/eksempel/">
-        <span>Eksempel</span>
+        <span>Eksempel: Samtykkebasert lånesøknad</span>
 
         
 
@@ -5899,7 +5899,7 @@ if(host != "localhost")
                 Betaling
                 
               </h1>
-              <p class="a-leadText" id="leadText">Denne utviklingsguiden beskriver hvordan man teknisk og funksjonelt kan ta i bruk Betaling i Altinn for å gjøre betaling som del av en innsendingstjeneste eller frittstående.</p>
+              <p class="a-leadText" id="leadText">Betaling i Altinn kan tas i bruk frittstående eller som del av en innsendingstjeneste.</p>
             
           
 
@@ -5909,8 +5909,6 @@ if(host != "localhost")
 <ul>
 <li>
 <ul>
-<li><a href="#innledning">Innledning</a></li>
-<li><a href="#betaling-en-altinn-tjeneste">Betaling - En Altinn tjeneste</a></li>
 <li><a href="#del-av-arbeidsflyten">Del av arbeidsflyten</a></li>
 <li><a href="#kan-være-avhengig-av-utfyllingen">Kan være avhengig av utfyllingen</a></li>
 <li><a href="#gjennomgang-av-oppsett-av-enkel-betalingstjeneste">Gjennomgang av oppsett av enkel betalingstjeneste</a>
@@ -5931,12 +5929,6 @@ if(host != "localhost")
 
 
 
-
-<h2 id="innledning">Innledning</h2>
-
-<p>Dette dokumentet inneholder spesifikk informasjon om hvordan man teknisk og funksjonelt kan ta i bruk Betaling i Altinn for å gjøre betaling som del av en innsendingstjeneste eller frittstående.</p>
-
-<h2 id="betaling-en-altinn-tjeneste">Betaling - En Altinn tjeneste</h2>
 
 <p>En del offentlige tjenester innebærer brukerbetaling som del av saksbehandlingen. Dette kan gjøres enkelt via ny funksjonalitet i Altinn levert med Altinn versjon 16.1.</p>
 
@@ -6313,22 +6305,6 @@ Første steg: Skjema fylles ut. Dette er et test-skjema som bare inkluderer beta
                               
           
                               
-                                  
-                      
-                      
-                          
-                              
-                          
-                          
-          
-                              
-                              
-                              
-          
-                              
-                      
-                  
-                              
                       
                   
                               
@@ -7220,6 +7196,9 @@ Første steg: Skjema fylles ut. Dette er et test-skjema som bare inkluderer beta
                               
           
                               
+                      
+                  
+                              
                                   
                       
                       
@@ -7232,9 +7211,6 @@ Første steg: Skjema fylles ut. Dette er et test-skjema som bare inkluderer beta
                               
                               
           
-                              
-                      
-                  
                               
                       
                   
@@ -7251,6 +7227,9 @@ Første steg: Skjema fylles ut. Dette er et test-skjema som bare inkluderer beta
                               
                               
           
+                              
+                      
+                  
                               
                       
                   
@@ -7263,14 +7242,26 @@ Første steg: Skjema fylles ut. Dette er et test-skjema som bare inkluderer beta
                           
                           
           
+                              
                               
+                                  
                               
                               
           
                               
+                                  
                       
-                  
+                      
+                          
+                              
+                          
+                          
+          
+                              
                               
+                              
+          
+                              
                       
                   
                               
@@ -7282,12 +7273,13 @@ Første steg: Skjema fylles ut. Dette er et test-skjema som bare inkluderer beta
                           
                           
           
-                              
                               
-                                  
                               
                               
           
+                              
+                      
+                  
                               
                                   
                       
@@ -7321,6 +7313,9 @@ Første steg: Skjema fylles ut. Dette er et test-skjema som bare inkluderer beta
                       
                   
                               
+                      
+                  
+                              
                                   
                       
                       
@@ -7329,14 +7324,28 @@ Første steg: Skjema fylles ut. Dette er et test-skjema som bare inkluderer beta
                           
                           
           
+                              
                               
+                                  
                               
                               
           
                               
+                                  
                       
-                  
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                                  
                               
+                              
+          
+                              
                                   
                       
                       
@@ -7364,12 +7373,13 @@ Første steg: Skjema fylles ut. Dette er et test-skjema som bare inkluderer beta
                           
                           
           
-                              
                               
-                                  
                               
                               
           
+                              
+                      
+                  
                               
                                   
                       
@@ -7378,13 +7388,30 @@ Første steg: Skjema fylles ut. Dette er et test-skjema som bare inkluderer beta
                               
                           
                           
+          
+                              
+                              
+                              
           
                               
+                      
+                  
                               
                                   
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
                               
                               
           
+                              
+                      
+                  
                               
                                   
                       
@@ -7417,6 +7444,9 @@ Første steg: Skjema fylles ut. Dette er et test-skjema som bare inkluderer beta
                               
                               
           
+                              
+                      
+                  
                               
                       
                   
@@ -7447,11 +7477,10 @@ Første steg: Skjema fylles ut. Dette er et test-skjema som bare inkluderer beta
           
                               
                               
+                                  
                               
-          
                               
-                      
-                  
+          
                               
                                   
                       
@@ -7487,15 +7516,45 @@ Første steg: Skjema fylles ut. Dette er et test-skjema som bare inkluderer beta
                               
                       
                   
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
                               
+          
+                              
                       
                   
+                              
+                                  
+                      
+                      
+                          
+                              
                               
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
                                   
                       
                       
                           
                               
+                                  
+                                  
+                              
                           
                           
           
@@ -7503,6 +7562,9 @@ Første steg: Skjema fylles ut. Dette er et test-skjema som bare inkluderer beta
                               
                               
           
+                              
+                      
+                  
                               
                       
                   
@@ -7537,7 +7599,20 @@ Første steg: Skjema fylles ut. Dette er et test-skjema som bare inkluderer beta
                               
                       
                   
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
                               
+                              
+          
+                              
                       
                   
                               
@@ -7577,7 +7652,6 @@ Første steg: Skjema fylles ut. Dette er et test-skjema som bare inkluderer beta
                       
                       
                           
-                              
                               
                           
                           
@@ -7587,13 +7661,45 @@ Første steg: Skjema fylles ut. Dette er et test-skjema som bare inkluderer beta
                               
           
                               
+                      
+                  
+                              
                                   
                       
                       
+                          
+                              
+                          
                           
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
                               
                                   
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
                                   
+                      
+                      
+                          
                               
                           
                           
@@ -7602,8 +7708,21 @@ Første steg: Skjema fylles ut. Dette er et test-skjema som bare inkluderer beta
                               
                               
           
+                              
+                      
+                  
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                  
                               
+                                  
                       
+                      
                   
                               
                       
@@ -7655,6 +7774,21 @@ Første steg: Skjema fylles ut. Dette er et test-skjema som bare inkluderer beta
                               
                       
                   
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                                  
+                              
+                              
+          
                               
                                   
                       
@@ -7703,6 +7837,19 @@ Første steg: Skjema fylles ut. Dette er et test-skjema som bare inkluderer beta
                               
                       
                   
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
                               
                                   
                       
@@ -7756,15 +7903,34 @@ Første steg: Skjema fylles ut. Dette er et test-skjema som bare inkluderer beta
                   
                               
                                   
+                      
                       
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
                       
                   
                               
                                   
                       
                       
-                  
+                          
+                              
+                          
+                          
+          
+                              
+                              
                               
+          
+                              
                       
                   
                               
@@ -7775,14 +7941,34 @@ Første steg: Skjema fylles ut. Dette er et test-skjema som bare inkluderer beta
                               
                           
                           
+          
+                              
+                              
+                              
           
                               
+                      
+                  
                               
                                   
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
                               
                               
           
                               
+                      
+                  
+                              
+                      
+                  
+                              
                                   
                       
                       
@@ -7795,6 +7981,556 @@ Første steg: Skjema fylles ut. Dette er et test-skjema som bare inkluderer beta
                               
                               
           
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                                  
+                              
+                              
+          
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                                  
+                              
+                              
+          
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                                  
+                              
+                              
+          
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                                  
+                      
+                      
+                          
+                              
+                          
+                          
+          
+                              
+                              
+                              
+          
+                              
+                      
+                  
+                              
+                      
+                  
                               
                       
                   
