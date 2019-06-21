@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.55.6" />
-    <meta name="description" content="For å tilby funksjonalitet for sikkerhet gjennom autentisering og autorisasjon benyttes ulike varianter tjenesteparametere for sluttbrukersystemer.">
+    <meta name="description" content="Altinn har helt siden oppstarten jobbet for å gjøre Altinn-tjenestene tilgjengelige for ekstern programvare. Ekstern programvare vil si datasystemer/sluttbrukersystemer som brukes av næringslivet, for eksempel regnskaps- eller lønnssystemer. Ønsker du å integrere et datasystem mot tjenester i Altinn har du oppskriften på det her.">
 
 
     
-    <title>Sikkerhet og feilkoder :: Altinn digitalisering - Utvikling</title>
+    <title>API for datasystem :: Altinn digitalisering - Utvikling</title>
     
     <link rel="shortcut icon" href="/docs/images/favicon.png" type="image/x-icon" />
     <link href="/docs/css/nucleus.css" rel="stylesheet">
@@ -49,7 +49,7 @@ if(host != "localhost")
 
 
   </head>
-  <body class="a-page" data-url="/docs/api/soap/teknisk-implementasjon/">
+  <body class="a-page" data-url="/docs/api/datasystem/">
     <nav class="a-jumpnav">
   <ul class="no-decoration d-flex">
     <li><a class="sr-only sr-only-focusable" href="#content">Hopp til hovedinnholdet</a></li>
@@ -790,7 +790,7 @@ if(host != "localhost")
   
     
     <li data-nav-id="/docs/api/soap/" class="dd-item 
-        parent
+        
         
         
         ">
@@ -803,7 +803,7 @@ if(host != "localhost")
         
 
           
-            <i class="fa fa-sort-down fa-lg category-icon"></i>
+            <i class="fa fa-caret-right fa-lg category-icon"></i>
           
 
         
@@ -1002,8 +1002,8 @@ if(host != "localhost")
   
     
     <li data-nav-id="/docs/api/soap/teknisk-implementasjon/" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/docs/api/soap/teknisk-implementasjon/">
@@ -1837,8 +1837,8 @@ if(host != "localhost")
   
     
     <li data-nav-id="/docs/api/datasystem/" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/docs/api/datasystem/">
@@ -5898,12 +5898,7 @@ if(host != "localhost")
 
 
 
-
-
-
- <a href='/docs/'>Utvikling</a> <span class='adocs-breadcrumb-divider'> / </span> <a href='/docs/api/'>API</a> <span class='adocs-breadcrumb-divider'> / </span> <a href='/docs/api/soap/'>SOAP</a> <span class='adocs-breadcrumb-divider'> / </span> Sikkerhet og feilkoder
-
- 
+ <a href='/docs/'>Utvikling</a> <span class='adocs-breadcrumb-divider'> / </span> <a href='/docs/api/'>API</a> <span class='adocs-breadcrumb-divider'> / </span> API for datasystem
 
  
 
@@ -5919,10 +5914,10 @@ if(host != "localhost")
           
             
               <h1 class="a-fontBold">
-                Sikkerhet og feilkoder
+                API for datasystem
                 
               </h1>
-              <p class="a-leadText" id="leadText">For å tilby funksjonalitet for sikkerhet gjennom autentisering og autorisasjon benyttes ulike varianter tjenesteparametere for sluttbrukersystemer.</p>
+              <p class="a-leadText" id="leadText">Altinn har helt siden oppstarten jobbet for å gjøre Altinn-tjenestene tilgjengelige for ekstern programvare. Ekstern programvare vil si datasystemer/sluttbrukersystemer som brukes av næringslivet, for eksempel regnskaps- eller lønnssystemer. Ønsker du å integrere et datasystem mot tjenester i Altinn har du oppskriften på det her.</p>
             
           
 
@@ -5931,84 +5926,28 @@ if(host != "localhost")
 
 
 
+<p>Slik går du frem:</p>
 
+<ol>
+<li><strong>Registrere datasystem og signere egenerklæring</strong><br>For å ivareta sikkerheten i Altinn trenger du å registrere systemet hos oss, samt fylle ut en egenerklæring, før du går i gang. Send en e-post til sluttbrukersystem@altinn.no med navn på datasystemet i emnefeltet, og skriv at du ønsker å registrere et nytt datasystem. I tillegg kan du laste ned dokumentene under, fylle ut og legge ved disse i samme e-post. <br><br>Vi fikser registreringen for deg så kjapt som mulig og gir deg beskjed når det er gjort. <br><a href="https://altinnett.brreg.no/PageFiles/12278/1.05%20Bestilling%20-%20Nytt%20sluttbrukersystem.doc">Bestilling - nytt datasystem</a> <br><a href="https://altinnett.brreg.no/PageFiles/12278/1.05b%20Sluttbrukersystemerkl%c3%a6ring%20signering%20preutfylling.doc">Egenerklæring datasystem</a> <br>Se eksempel på <a href="https://altinnett.brreg.no/Global/sbs/eksempel-egenerkaring.pdf">utfylt egenerklæringsskjema</a></li>
+<li><strong>Integrasjon via SOAP eller REST</strong><br>De fleste av Altinns tjenester er tilgjengelig via SOAP. Foreløpig er det kun få tjenester som er tilgjengelig via REST API. For å lage selve integrasjonen mot tjenester via SOAP kan du lese om hvordan det gjøres i <a href="/docs/api/soap/">dokumentasjon for SOAP</a>. Skal du integrere tjenester via REST kan du lese det i <a href="/docs/api/rest/">dokumentasjon for REST</a>.</li>
+<li><strong>Implementering</strong><br>Før du kobler systemet på tjenestene i Altinn trenger du å implementere innlogging og koble deg opp mot Altinns grensesnitt. <br><br><strong>Implementering av autentiserings- og autoriseringsmekanismer</strong><br> Det finnes to måter å håndtere autentisering (innlogging) og autorisering (styring av tilgang) av datasystemer på. Det kan være brukernavn og passord eller bruk av <a href="https://www.altinn.no/hjelp/profil/avanserte-innstillinger/hva-er-virksomhetssertifikat/">virksomhetssertifikater</a>. <br><br><strong>Oppsett mot Altinns grensesnitt</strong><br> Før du kobler deg på tjenestene i Altinn trenger du å sette opp integrasjon mot Altinns grensesnitt, se <a href="/docs/api/soap/">dokumentasjon for SOAP</a>.</li>
+<li><strong>Koble systemet ditt på tjenestene</strong><br>Flere etater har lagt ut dokumentasjon på hvordan du kobler deg på tjenestene deres på en egen <a href="https://altinn.brreg.no/sites/fagsystemer/default.aspx">portal for sluttbrukersystemer</a>. For å få tilgang til denne portalen sender du en e-post til sluttbrukersystem@altinn.no. Oppgi hvilke personer som skal ha tilgang, e-postadresse og mobilnummer til personene, samt hvilket sluttbrukersystem det gjelder.</li>
+<li><strong>Teste tjenestene</strong><br>Test av tjenestene gjøres i Altinn sitt testmiljø. Du må teste mot de tjenestene du har valgt å utarbeide en løsning for. Det benyttes fiktive testpersoner og organisasjoner i våre testmiljø. Du kan bestille testbrukere ved å sende en henvendelse til sluttbrukersystem@altinn.no.</li>
+<li><strong>For at brukerne skal kunne ta i bruk systemet ditt</strong><br>Husk å sikre deg at du har registrert systemet ditt slik at det blir tilgjengelig for brukerne som beskrevet i trinn 1. Det første brukerne dine må gjøre når de skal ta i bruk systemet ditt er å gå inn på altinn.no, velge Profil og Avanserte innstillinger hvor de under Datasystem kan velge systemet ditt.</li>
+</ol>
 
-<ul>
-<li>Basic operasjoner med autentiseringsinformasjon (brukernavn/passord) i meldingen.</li>
-<li>I en web service operasjon vil dette typisk bety at de første elementene i en melding er forbeholdt autentiseringsinformasjon.</li>
+<ul class="children children-li js-moveChildrenFrom">
+    
+    
+    
+
+    
+        
+    
+
+    
 </ul>
-
-<p>Eksempel på en SOAP melding med basic:</p>
-
-<p><img src="basic-eksempel.png" alt="&quot;Basic eksempel&quot;" /></p>
-
-<ul>
-<li><p>WS som benytter WS-Security hvor autentiseringsinformasjon (brukernavn/passord) følger SOAP meldingen på en standardisert måte gjennom definerte SOAP header elementer.</p></li>
-
-<li><p>I en web service operasjon vil dette bety at autentiseringsinformasjonen ligger i SOAP header basert på        innhold definert i WS-Security standarder.</p></li>
-</ul>
-
-<p>Eksempel på en SOAP melding med bruk av WS-Security:</p>
-
-<p><img src="ws-security-eksempel.png" alt="&quot;ws-security eksempel&quot;" /></p>
-
-<ul>
-<li>EC operasjoner hvor autentiseringsinformasjon i form av sertifikat blir formidlet via SOAP header, mens tilhørende brukernavn og passord blir sent som del av meldingen.</li>
-</ul>
-
-<p>Eksempel på en SOAP melding med bruk av EC:</p>
-
-<p><img src="ec-eksempel.png" alt="&quot;EC eksempel&quot;" /></p>
-
-<h2 id="feilhåndtering">Feilhåndtering</h2>
-
-<p>Altinn returnerer feilkoder hvis noe går galt. For å formidle feilsituasjonen benyttes en SOAP Fault med en egen kontrakt som inneholder felter som identifiserer feilen og gir en tekstlig feilmelding.</p>
-
-<h2 id="soap-fault">SOAP Fault</h2>
-
-<p>Altinn benytter en SOAP fault til å returnere feilmeldinger for en web service. Denne fault meldingen er i henholdt til AltinnFault kontrakten definert i WSDL for alle tjenestene. Kontrakten vil angi en feilkode og en feilmelding, henholdsvis <em>ErrorID</em> og <em>AltinnErrorMessage</em>, for å definere feilsituasjoner.</p>
-
-<p>Eksempel på en feilmelding fra Altinn:</p>
-
-<p><img src="soap-fault.png" alt="&quot;SOAP Fault&quot;" /></p>
-
-<h2 id="feilkoder">Feilkoder</h2>
-
-<p>Listen under angir de generelle feilkodene som benyttes. Disse er først og fremst benyttet i sammenheng med autentisering og autorisering og benyttes derfor av flere av tjenestene i Altinn. Feilkoder mer spesifikke for operasjonene er listet opp under de respektive operasjonene i kapittel 6 Grensesnitt.</p>
-
-<table>
-<thead>
-<tr>
-<th>Feilkode</th>
-<th>Beskrivelse</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>0</td>
-<td>Denne feilen oppstår i følgende tilfeller (se tekst i AltinnErrorMessage for mer informasjon): Autentisering av sluttbruker feilet pga feil brukernavn/passord/pin. Maks bruk av pinkode oppnådd, benytt ny pinkode. Sesjon for pinkode har gått ut, benytt ny pinkode. Bruker er midlertidig låst</td>
-</tr>
-
-<tr>
-<td>5</td>
-<td>Denne feilen oppstår i følgende tilfeller (se tekst i AltinnErrorMessage for mer informasjon):Ikke mulig å autorisere forespørsel basert på sendte parametere – verifiser gyldigheten/format. Autentisering av systemet feilet pga feil brukernavn/passord. Systemet eller virksomhetsbrukeren er midlertidig låst ute. Systemet er ikke autorisert for denne operasjonen på vegne av angitt avgiver. Angitt system ID er ikke gyldig – skal være et nummer</td>
-</tr>
-
-<tr>
-<td>989</td>
-<td>Denne feilen oppstår i følgende tilfeller (se tekst i AltinnErrorMessage for mer informasjon): Autentisering av sluttbruker feilet pga feil brukernavn/passord/pin. Maks bruk av pinkode oppnådd, benytt ny pinkode. Sesjon for pinkode har gått ut, benytt ny pinkode. Bruker er midlertidig låst</td>
-</tr>
-</tbody>
-</table>
-
-<p>Hvis det ikke kommer en forståelig feilmelding, send en henvendelse til support@altinn.no. Legg med tidspunkt for innsending, avgiver (reportee) og sluttbrukersystem id, den unike koden (ErrorGuid) samt beskrivelse av hva som har skjedd.</p>
-
-<h2 id="benytt-xmldsig-digital-signatur">Benytt XMLDSig - digital signatur</h2>
-
-<p>Noen tjenesteeiere krever <em>XMLDSig</em>-signering i tillegg til Altinns vanlige sikkerhetsfunksjoner. Altinn støtter skjema signert med <em>enveloped»-metoden</em>. Følgende XML viser hvordan signaturen skal dannes for å bli betraktet som gyldig av Altinn. Kanonisering (prosessen hvorved XML-dokumentet representeres på kanonisk form), signering og transformasjon må være samme som nedenfor; i tillegg må sertifikatet brukt for å signere dokumentet være inkludert i signaturen.</p>
-
-<p>Nøyaktig ett «Signature»-element er tillatt i «XMLDSig»-elementet. Signaturen må være definert ifølge XMLDSig-navneromspesifikasjonen. Sertifikatet brukt for å signere dokumentet må være gyldig på det tidspunkt skjema leveres til Altinn. Skjemaene signerte med XMLDSig må sendes inn “komplett” og signaturen valideres av Altinn før skjemasendes videre til tjenesteeier. Tjenesteeier kan validere signaturen etter mottak fra Altinn. Merk at innhold i «XMLDSig»-elementet er definert i tjeneste-XSD-en som et <em>«any»-element</em> med <em>processContents=lax</em> og namespace lik XMLDSig-navnerommet. <em>Lax</em> prosessering betyr i praksis at ingen valideringsfeil resulterer hvis validatoren ikke er gitt et XSD-skjema som inkluderer XMLDSig-navnerommet, i.e. <em>XMLDSig-XSD</em></p>
 
 
 <footer class=" footline" >
@@ -6423,7 +6362,6 @@ if(host != "localhost")
                       
                           
                               
-                              
                           
                           
           
@@ -6438,9 +6376,6 @@ if(host != "localhost")
                       
                       
                           
-                              
-                                  
-                                  
                               
                           
                           
@@ -6538,7 +6473,6 @@ if(host != "localhost")
                       
                           
                               
-                              
                           
                           
           
@@ -6557,9 +6491,6 @@ if(host != "localhost")
                       
                       
                           
-                              
-                                  
-                                  
                               
                           
                           
@@ -6968,6 +6899,7 @@ if(host != "localhost")
                       
                       
                           
+                              
                               
                           
                           
@@ -6987,6 +6919,9 @@ if(host != "localhost")
                       
                       
                           
+                              
+                                  
+                                  
                               
                           
                           
@@ -9293,10 +9228,10 @@ if(host != "localhost")
           
           
                   
-                      <a class="nav nav-prev" href="/docs/api/soap/skjemasett-sammenlikning/" title="Skjemasett sammenligning"> <i class="fa fa-angle-left"></i> Forrige side</a>
+                      <a class="nav nav-prev" href="/docs/api/tjenesteeiere/batch/" title="Batch"> <i class="fa fa-angle-left"></i> Forrige side</a>
                   
                   
-                      <a class="nav nav-next" href="/docs/api/tjenesteeiere/" title="API for Tjenesteeiere" style="margin-right: 0px;">Neste side <i class="fa fa-angle-right"></i></a>
+                      <a class="nav nav-next" href="/docs/utviklingsguider/" title="Utviklingsguider" style="margin-right: 0px;">Neste side <i class="fa fa-angle-right"></i></a>
                   
               </div>
 
@@ -9308,7 +9243,7 @@ if(host != "localhost")
               
               
                 <div id="top-github-link">
-                  <a class="" href="https://github.com/altinn/docs/blob/master/content/api/soap/teknisk-implementasjon/_index.md" target="blank">
+                  <a class="" href="https://github.com/altinn/docs/blob/master/content/api/datasystem/_index.md" target="blank">
                     <i class="fa fa-code-fork"></i>
                     Endre denne siden i github
                   </a>

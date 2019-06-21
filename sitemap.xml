@@ -603,6 +603,10 @@
   </url>
   
   <url>
+    <loc>https://altinn.github.io/docs/api/soap/</loc>
+  </url>
+  
+  <url>
     <loc>https://altinn.github.io/docs/utviklingsguider/samtykke/begrepsliste/</loc>
   </url>
   
@@ -612,6 +616,10 @@
   
   <url>
     <loc>https://altinn.github.io/docs/api/soap/funksjonelle-scenario/</loc>
+  </url>
+  
+  <url>
+    <loc>https://altinn.github.io/docs/api/tjenesteeiere/</loc>
   </url>
   
   <url>
@@ -659,10 +667,6 @@
   </url>
   
   <url>
-    <loc>https://altinn.github.io/docs/api/soap/</loc>
-  </url>
-  
-  <url>
     <loc>https://altinn.github.io/docs/api/tjenesteeiere/soap/grensesnitt/samhandlingstjeneste/</loc>
   </url>
   
@@ -687,6 +691,10 @@
   </url>
   
   <url>
+    <loc>https://altinn.github.io/docs/api/datasystem/</loc>
+  </url>
+  
+  <url>
     <loc>https://altinn.github.io/docs/ny-funksjonalitet/</loc>
   </url>
   
@@ -696,10 +704,6 @@
   
   <url>
     <loc>https://altinn.github.io/docs/api/soap/skjemasett-sammenlikning/</loc>
-  </url>
-  
-  <url>
-    <loc>https://altinn.github.io/docs/api/tjenesteeiere/</loc>
   </url>
   
   <url>
