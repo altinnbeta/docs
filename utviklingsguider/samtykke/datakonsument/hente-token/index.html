@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.30.2">
-    <meta name="description" content="Ved bruk av Altinns REST-api kan man videresende brukeren til betalingssteget i portal på altinn.no.">
+    <meta name="description" content="Hvordan veksle inn autorisasjonskode i token">
     <title>
-      Betaling :: Altinn digitalisering - Utvikling
+      Hente token :: Altinn digitalisering - Utvikling
     </title>
     <link rel="shortcut icon" href="/docs/images/favicon.png" type="image/x-icon">
     <link href="/docs/css/nucleus.css" rel="stylesheet">
@@ -36,7 +36,7 @@
       }
     </style>
   </head>
-  <body class="a-page" data-url="/docs/api/rest/betaling/">
+  <body class="a-page" data-url="/docs/utviklingsguider/samtykke/datakonsument/hente-token/">
     <nav class="a-jumpnav">
       <ul class="no-decoration d-flex">
         <li>
@@ -144,11 +144,11 @@
                     </ul>
                   </li>
 
-                  <li data-nav-id="/docs/api/" class="dd-item parent">
-                    <a href="/docs/api/"><span>API</span> <i class="fa fa-sort-down fa-lg category-icon"></i></a>
+                  <li data-nav-id="/docs/api/" class="dd-item">
+                    <a href="/docs/api/"><span>API</span> <i class="fa fa-caret-right fa-lg category-icon"></i></a>
                     <ul>
-                      <li data-nav-id="/docs/api/rest/" class="dd-item parent">
-                        <a href="/docs/api/rest/"><span>REST</span> <i class="fa fa-sort-down fa-lg category-icon"></i></a>
+                      <li data-nav-id="/docs/api/rest/" class="dd-item">
+                        <a href="/docs/api/rest/"><span>REST</span> <i class="fa fa-caret-right fa-lg category-icon"></i></a>
                         <ul>
                           <li data-nav-id="/docs/api/rest/kom-i-gang/" class="dd-item">
                             <a href="/docs/api/rest/kom-i-gang/"><span>Kom i gang med REST API</span></a>
@@ -216,7 +216,7 @@
                             <a href="/docs/api/rest/formidling/"><span>Formidling</span></a>
                           </li>
 
-                          <li data-nav-id="/docs/api/rest/betaling/" class="dd-item active">
+                          <li data-nav-id="/docs/api/rest/betaling/" class="dd-item">
                             <a href="/docs/api/rest/betaling/"><span>Betaling</span></a>
                           </li>
 
@@ -373,8 +373,8 @@
                     </ul>
                   </li>
 
-                  <li data-nav-id="/docs/utviklingsguider/" class="dd-item">
-                    <a href="/docs/utviklingsguider/"><span>Utviklingsguider</span> <i class="fa fa-caret-right fa-lg category-icon"></i></a>
+                  <li data-nav-id="/docs/utviklingsguider/" class="dd-item parent">
+                    <a href="/docs/utviklingsguider/"><span>Utviklingsguider</span> <i class="fa fa-sort-down fa-lg category-icon"></i></a>
                     <ul>
                       <li data-nav-id="/docs/utviklingsguider/digitaldialog/" class="dd-item">
                         <a href="/docs/utviklingsguider/digitaldialog/"><span>Digital dialog</span></a>
@@ -401,8 +401,8 @@
                         </ul>
                       </li>
 
-                      <li data-nav-id="/docs/utviklingsguider/samtykke/" class="dd-item">
-                        <a href="/docs/utviklingsguider/samtykke/"><span>Samtykke</span> <i class="fa fa-caret-right fa-lg category-icon"></i></a>
+                      <li data-nav-id="/docs/utviklingsguider/samtykke/" class="dd-item parent">
+                        <a href="/docs/utviklingsguider/samtykke/"><span>Samtykke</span> <i class="fa fa-sort-down fa-lg category-icon"></i></a>
                         <ul>
                           <li data-nav-id="/docs/utviklingsguider/samtykke/eksempel/" class="dd-item">
                             <a href="/docs/utviklingsguider/samtykke/eksempel/"><span>Eksempel: Samtykkebasert lånesøknad</span></a>
@@ -454,8 +454,8 @@
                             </ul>
                           </li>
 
-                          <li data-nav-id="/docs/utviklingsguider/samtykke/datakonsument/" class="dd-item">
-                            <a href="/docs/utviklingsguider/samtykke/datakonsument/"><span>For datakonsument</span> <i class="fa fa-caret-right fa-lg category-icon"></i></a>
+                          <li data-nav-id="/docs/utviklingsguider/samtykke/datakonsument/" class="dd-item parent">
+                            <a href="/docs/utviklingsguider/samtykke/datakonsument/"><span>For datakonsument</span> <i class="fa fa-sort-down fa-lg category-icon"></i></a>
                             <ul>
                               <li data-nav-id="/docs/utviklingsguider/samtykke/datakonsument/komme-i-gang/" class="dd-item">
                                 <a href="/docs/utviklingsguider/samtykke/datakonsument/komme-i-gang/"><span>Komme i gang</span> <i class="fa fa-caret-right fa-lg category-icon"></i></a>
@@ -470,7 +470,7 @@
                                 <a href="/docs/utviklingsguider/samtykke/datakonsument/be-om-samtykke/"><span>Be om samtykke</span></a>
                               </li>
 
-                              <li data-nav-id="/docs/utviklingsguider/samtykke/datakonsument/hente-token/" class="dd-item">
+                              <li data-nav-id="/docs/utviklingsguider/samtykke/datakonsument/hente-token/" class="dd-item parent active">
                                 <a href="/docs/utviklingsguider/samtykke/datakonsument/hente-token/"><span>Hente token</span></a>
                               </li>
 
@@ -972,43 +972,77 @@
                 <div class="a-text">
                   <div id="top-bar">
                     <div id="breadcrumbs" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-                      <span id="sidebar-toggle-span" class="adocs-sidebarToggle"><a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> <span class="sr-only">Vis/skjul meny</span></a></span> <span class="links"><a href='/docs/'>Utvikling</a> <span class='adocs-breadcrumb-divider'>/</span> <a href='/docs/api/'>API</a> <span class='adocs-breadcrumb-divider'>/</span> <a href='/docs/api/rest/'>REST</a> <span class='adocs-breadcrumb-divider'>/</span> Betaling</span>
+                      <span id="sidebar-toggle-span" class="adocs-sidebarToggle"><a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> <span class="sr-only">Vis/skjul meny</span></a></span> <span class="links"><a href='/docs/'>Utvikling</a> <span class='adocs-breadcrumb-divider'>/</span> <a href='/docs/utviklingsguider/'>Utviklingsguider</a> <span class='adocs-breadcrumb-divider'>/</span> <a href='/docs/utviklingsguider/samtykke/'>Samtykke</a> <span class='adocs-breadcrumb-divider'>/</span> <a href='/docs/utviklingsguider/samtykke/datakonsument/'>For datakonsument</a> <span class='adocs-breadcrumb-divider'>/</span> Hente token</span>
                     </div>
                   </div>
 
                   <div id="body-inner">
                     <h1 class="a-fontBold">
-                      Betaling
+                      Hente token
                     </h1>
 
                     <p class="a-leadText" id="leadText">
-                      Ved bruk av Altinns REST-api kan man videresende brukeren til betalingssteget i portal på altinn.no.
+                      Hvordan veksle inn autorisasjonskode i token
                     </p>
 
-                    <h2 id="fremgangsmåte">
-                      Fremgangsmåte
+                    <h2 id="veksle-inn-autorisasjonskode-i-token">
+                      Veksle inn autorisasjonskode i token
                     </h2>
 
-                    <ul>
-                      <li>GET på elementet som skal betales (f.eks. <a href="https://www.altinn.no/api/my/messages/aXXXXX">https://www.altinn.no/api/my/messages/aXXXXX</a>)
-                      </li>
+                    <p>
+                      Autorisasjonskoden som datakonsument mottar fra Altinn når sluttbruker har samtykket benyttes til å hente token. Altinn plattformen støtter&nbsp;at man kan veksle inn autorisasjonskoden via REST med ApiKey. Det krever at man har ApiKey som er registrert på organisasjonsnummer som enten matcher mottaker av samtykke eller registrert tredjepart som kan behandle samtykker på vegne av mottaker. Bestilling av nye nøkler, eller oppdatering av eksisterende, gjøres ved henvendelse til <a href="mailto:servicedesk@altinn.no">servicedesk@altinn.no</a>.
+                    </p>
 
-                      <li>Hente ut verdi fra link med navn <code>payment</code>
-                      </li>
+                    <p>
+                      Tokenet som returneres vil være en streng bestående av et base64-encodet Json Web Token.
+                    </p>
 
-                      <li>Redirecte brukeren til linken, alternativt med parameteret <code>returnurl</code> for å hente brukeren tilbake til samme side etter at betaling er utført.
-                        <ul>
-                          <li>Domenet på <code>returnurl</code> må være registrert sammen med apikey for å ikke bli stoppet av CORS.
-                          </li>
+                    <p>
+                      For å hente ut token ved hjelp av autorisasjonskode over REST gjør man GET på
+                    </p>
 
-                          <li>Når brukeren kommer tilbake vil URL-en ha en ny parameter, kalt <code>resource</code> som inneholder link til elementet (etter arkivering vil elementet få nytt navn - bXXXXX)
-                          </li>
+                    <p>
+                      <a href="https://www.altinn.no/api/authorization/token?authcode=%7bAuthorizationCode%7d"><em>https://www.altinn.no/api/authorization/token?authcode={AuthorizationCode}</em></a>
+                    </p>
 
-                          <li>Hvis man ikke bruker <code>returnurl</code>vil siste respons i prosessen ha status 204 og location header inneholder URI til arkivert element.
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
+                    <p>
+                      med header ApiKey: <code>{apikey}</code>
+                    </p>
+
+                    <p>
+                      Eksempel på response (encoded token):
+                    </p>
+
+                    <pre><code class="language-markdown">eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IkthUGxpMFJUdVVUcl9yUXJWSmhzQkNXQS0yayJ9.eyJTZXJ2aWNlQ29kZXMiOi
+I0NjI5LDEiLCJBdXRob3JpemF0aW9uQ29kZSI6ImY0NTQ5NDNlLTNiNTctNGI0YS1iYjRjLTNkZjY0YTgwMmQ4NyIsIk9mZmVyZWRCeSI6I
+jA2MTE3NzAxNTQ3IiwiQ292ZXJlZEJ5IjoiOTEwNTE0MzE4IiwiRGVsZWdhdGVkRGF0ZSI6IjI3LjEwLjIwMTYgMjE6MTE6MTciLCJWYWxp
+ZFRvRGF0ZSI6IjA1LjAxLjIwMTcgMTA6MzA6MDAiLCJpc3MiOiJhbHRpbm4ubm8iLCJleHAiOjE0Nzc1OTU1MTcsIm5iZiI6MTQ3NzU5NTQ
+4N30.S9RBNazx2Ml0R93cSEf_LC5YP2UcYtFf7w6JH_OPy_MK1HhVIxA2e-5DQjPV53HmKBhlHmL3Wxz36KzIXddfz1olKLEK7Xqn61FJFL
+TCiReKcySRcvDtRhLtFVH8zT-VcaEEXyA9_tTUumUVKTqy9vPMDOYAhmih55uT__Ghs5UQbxDZXLJ08f-SDUq-wlcbU8TFLfBnrQBxF53Sf
+L3BvmjYTg_xm69mBRkGuW431fZnMiY_U3Omrd0gHniu8ri33lpEaL3ip1Lq65QC_jVzy2WHN1RdQCA5WiYGJ89GoSZL2eAtCS8d7qngsMUu
+zBPpcn4hDiI7MkK4RWrAc2drTw
+</code></pre>
+                    <p>
+                      Hvis datakilde ønsker å verifisere hvilken verdi som ligger i “offeredBy” (fødsels- eller organisasjonsnummer til den som har gitt samtykke) så må token decodes. Se <a href="../../datakilde/bruk-av-token/#bruk-av-self-contained-oauth-token">her</a> for eksempel på decoded token samt informasjon om sertifikat som må benyttes ved decoding.
+                    </p>
+
+                    <p>
+                      REST-tjenesten returnerer 403 dersom authcode er ugyldig eller Apikeyen ikke har tilgang til angitt autorisasjonskode:
+                    </p>
+
+                    <pre><code class="language-HTTP">403 The API key is not authorized for this operation, or the supplied authorization code is either expired or invalid.
+</code></pre>
+                    <h2 id="hente-data-fra-datakilden-ved-hjelp-av-altinn-signert-token">
+                      Hente data fra datakilden ved hjelp av Altinn-signert token
+                    </h2>
+
+                    <p>
+                      Når datakonsument har mottatt Altinn-signert token benyttes dette i request mot datakilden for å få tilgang til data. Formatet på hvordan denne informasjonen overføres må avtales mellom datakilde og datakonsument, og styres ikke av Altinn.
+                    </p>
+
+                    <p>
+                      Token har 30 sekunders varighet og datakonsument må be om nytt token når det har gått ut (benytt samme autorisasjonskode om igjen).
+                    </p>
 
                     <footer class="footline">
                     </footer>
@@ -1016,12 +1050,12 @@
                 </div>
 
                 <div id="navigation">
-                  <a class="nav nav-prev" href="/docs/api/rest/formidling/" title="Formidling"><i class="fa fa-angle-left"></i> Forrige side</a> <a class="nav nav-next" href="/docs/api/rest/profil/" title="Profil" style="margin-right: 0px;">Neste side <i class="fa fa-angle-right"></i></a>
+                  <a class="nav nav-prev" href="/docs/utviklingsguider/samtykke/datakonsument/be-om-samtykke/" title="Be om samtykke"><i class="fa fa-angle-left"></i> Forrige side</a> <a class="nav nav-next" href="/docs/utviklingsguider/samtykke/datakonsument/logge-bruk/" title="Logge bruk av samtykke" style="margin-right: 0px;">Neste side <i class="fa fa-angle-right"></i></a>
                 </div>
               </div>
 
               <div id="top-github-link">
-                <a class="" href="https://github.com/altinn/docs/blob/master/content/api/rest/betaling.md" target="blank"><i class="fa fa-code-fork"></i> Endre denne siden i github</a>
+                <a class="" href="https://github.com/altinn/docs/blob/master/content/utviklingsguider/samtykke/datakonsument/hente-token/_index.md.md" target="blank"><i class="fa fa-code-fork"></i> Endre denne siden i github</a>
               </div>
             </section>
           </div>
