@@ -195,7 +195,7 @@
   </url>
   
   <url>
-    <loc>https://altinn.github.io/docs/utviklingsguider/samtykke/datakonsument/hente-token/</loc>
+    <loc>https://altinn.github.io/docs/utviklingsguider/samtykke/datakonsument/hente-token/_index.md/</loc>
   </url>
   
   <url>
@@ -508,6 +508,10 @@
   
   <url>
     <loc>https://altinn.github.io/docs/api/soap/grensesnitt/</loc>
+  </url>
+  
+  <url>
+    <loc>https://altinn.github.io/docs/api/soap/grensesnitt/nye-ec-endepunkter/</loc>
   </url>
   
   <url>
